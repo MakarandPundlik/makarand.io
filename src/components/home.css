@@ -1,0 +1,12 @@
+.home{
+    /* min-height: 100vh; */
+    box-sizing: border-box;
+    /* Prevent padding from adding extra height */
+}
+
+.box {
+    margin: 3rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
