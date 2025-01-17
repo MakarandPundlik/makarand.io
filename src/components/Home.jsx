@@ -6,6 +6,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import * as icons from "simple-icons";
 
 export default function Home(props) {
+  //   const my = () => {
+  //     icons.siGithub;
+  //   };
   return (
     <React.Fragment>
       <CssBaseline />
@@ -15,6 +18,18 @@ export default function Home(props) {
             <Box className="box">
               <Typography variant="h1">Hi I am Makarand</Typography>
               <Typography variant="h4">I like to code</Typography>
+              <Box className="social-box">
+                {["siGmail", "siInstagram", "siGithub"].map((icon) => {
+                  const slug = icons[icon].slug;
+                  return (
+                    <Avatar
+                      className="social-icon"
+                      variant="rounded"
+                      src={`https://cdn.simpleicons.org/${slug}`}
+                    />
+                  );
+                })}
+              </Box>
             </Box>
           </Grid2>
           <Grid2 size={6}>

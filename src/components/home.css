@@ -10,3 +10,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.social-box {
+    display: flex;
+}
+
+.social-icon {
+    margin: 1rem;
+}
