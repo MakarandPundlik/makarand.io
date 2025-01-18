@@ -4,11 +4,9 @@ import { Avatar, Box, Grid2 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import * as icons from "simple-icons";
+import { ReactTyped } from "react-typed";
 
 export default function Home(props) {
-  //   const my = () => {
-  //     icons.siGithub;
-  //   };
   return (
     <React.Fragment>
       <CssBaseline />
@@ -16,8 +14,22 @@ export default function Home(props) {
         <Grid2 container>
           <Grid2 size={6}>
             <Box className="box">
-              <Typography variant="h1">Hi I am Makarand</Typography>
-              <Typography variant="h4">I like to code</Typography>
+              <Typography variant="h3">Hi, I am </Typography>
+              <Typography
+                variant="p"
+                sx={{ fontWeight: 100, fontSize: "5rem" }}
+              >
+                Makarand
+              </Typography>
+              <Typography variant="h5" sx={{ fontWeight: 100 }}>
+                <ReactTyped
+                  strings={["I like to code"]}
+                  typeSpeed={40}
+                  backSpeed={60}
+                  loop
+                ></ReactTyped>
+              </Typography>
+
               <Box className="social-box">
                 {["siGmail", "siInstagram", "siGithub"].map((icon) => {
                   const slug = icons[icon].slug;
@@ -33,7 +45,7 @@ export default function Home(props) {
             </Box>
           </Grid2>
           <Grid2 size={6}>
-            <Box className="box">
+            <Box className="box2">
               <Avatar
                 variant="rounded"
                 src="/landing.svg"

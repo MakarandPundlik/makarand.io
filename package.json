@@ -10,6 +10,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-scripts": "5.0.1",
+    "react-typed": "^2.0.12",
     "simple-icons": "^14.2.0"
   },
   "scripts": {

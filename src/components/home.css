@@ -1,11 +1,19 @@
 .home{
-    /* min-height: 100vh; */
-    box-sizing: border-box;
+    min-height: 90vh;
+    font-weight: 200;
+    /* box-sizing: border-box; */
     /* Prevent padding from adding extra height */
 }
 
 .box {
-    margin: 3rem;
+    margin: 10rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 {
+    margin: 5rem;
     flex-direction: row;
     align-items: center;
     justify-content: center;
