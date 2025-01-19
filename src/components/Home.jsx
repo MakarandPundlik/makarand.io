@@ -1,10 +1,18 @@
 import * as React from "react";
 import "./home.css";
-import { Avatar, Box, Grid2 } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import CssBaseline from "@mui/material/CssBaseline";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid2,
+  Tooltip,
+  Typography,
+  CssBaseline,
+} from "@mui/material";
+
 import * as icons from "simple-icons";
 import { ReactTyped } from "react-typed";
+import { landingPage } from "../data.js";
 
 export default function Home(props) {
   return (
@@ -23,7 +31,7 @@ export default function Home(props) {
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: 100 }}>
                 <ReactTyped
-                  strings={["I like to code"]}
+                  strings={landingPage.messages}
                   typeSpeed={40}
                   backSpeed={60}
                   loop
@@ -31,14 +39,19 @@ export default function Home(props) {
               </Typography>
 
               <Box className="social-box">
-                {["siGmail", "siInstagram", "siGithub"].map((icon) => {
-                  const slug = icons[icon].slug;
+                {landingPage.socials.map(({ slug, link, tooltip }) => {
+                  console.log(icons[slug]);
                   return (
-                    <Avatar
-                      className="social-icon"
-                      variant="rounded"
-                      src={`https://cdn.simpleicons.org/${slug}`}
-                    />
+                    <Button href={link}>
+                      <Tooltip title={tooltip}>
+                        {" "}
+                        <Avatar
+                          className="social-icon"
+                          variant="square"
+                          src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
+                        />
+                      </Tooltip>
+                    </Button>
                   );
                 })}
               </Box>
@@ -48,7 +61,7 @@ export default function Home(props) {
             <Box className="box2">
               <Avatar
                 variant="rounded"
-                src="/landing.svg"
+                src="./landing.svg"
                 style={{ height: "60vh", width: "80vh" }}
               />
             </Box>

@@ -21,8 +21,17 @@
 
 .social-box {
     display: flex;
+    justify-content: left;
 }
 
 .social-icon {
-    margin: 1rem;
+    margin: 1rem 0rem;
+}
+
+.card {
+    max-width: 15rem;
+}
+
+.card-icon {
+    height: "7vh"; width: "10vh"; margin-bottom: "2rem"
 }

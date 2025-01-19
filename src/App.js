@@ -4,17 +4,20 @@ import ElevateAppBar from "./components/AppBar";
 import Home from "./components/Home";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 const theme = createTheme({
   palette: {
     background: {
-      default: "#373b38",
+      default: "#212121",
+      paper: "#3b3a3a",
     },
     text: {
       primary: "#fff",
     },
     primary: {
-      main: "#373b38",
+      main: "#212121",
     },
   },
 });
@@ -26,6 +29,8 @@ function App() {
         <ElevateAppBar />
         <Home />
         <About />
+        <Skills />
+        <Experience />
       </ThemeProvider>
     </div>
   );
