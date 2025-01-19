@@ -1,15 +1,6 @@
 import * as React from "react";
 import "./home.css";
-import {
-  Avatar,
-  Box,
-  Button,
-  Grid2,
-  Tooltip,
-  Typography,
-  CssBaseline,
-} from "@mui/material";
-
+import { Avatar, Box, Button, Grid2, Tooltip, Typography } from "@mui/material";
 import * as icons from "simple-icons";
 import { ReactTyped } from "react-typed";
 import { landingPage } from "../data.js";
@@ -17,16 +8,14 @@ import { landingPage } from "../data.js";
 export default function Home(props) {
   return (
     <React.Fragment>
-      <CssBaseline />
       <Box className="home">
         <Grid2 container>
           <Grid2 size={6}>
             <Box className="box">
-              <Typography variant="h3">Hi, I am </Typography>
-              <Typography
-                variant="p"
-                sx={{ fontWeight: 100, fontSize: "5rem" }}
-              >
+              <Typography variant="h4" sx={{ fontWeight: 100 }}>
+                Hi, I am
+              </Typography>
+              <Typography variant="h1" sx={{ fontWeight: 100 }}>
                 Makarand
               </Typography>
               <Typography variant="h5" sx={{ fontWeight: 100 }}>
@@ -40,7 +29,6 @@ export default function Home(props) {
 
               <Box className="social-box">
                 {landingPage.socials.map(({ slug, link, tooltip }) => {
-                  console.log(icons[slug]);
                   return (
                     <Button href={link}>
                       <Tooltip title={tooltip}>

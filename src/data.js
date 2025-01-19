@@ -44,51 +44,92 @@ export const skills = [
   {
     title: "Languages",
     options: [
-      { slug: "siJavascript" },
-      { slug: "siTypescript" },
-      { slug: "siPython" },
-      { slug: "siRuby" },
-      { slug: "siHtml5" },
-      { slug: "siCss3" },
+      { slug: "siJavascript", tooltip: "JavaScript" },
+      { slug: "siTypescript", tooltip: "TypeScript" },
+      { slug: "siPython", tooltip: "Python" },
+      { slug: "siRuby", tooltip: "Ruby" },
+      { slug: "siHtml5", tooltip: "HTML5" },
+      { slug: "siCss3", tooltip: "CSS3" },
     ],
   },
   {
     title: "Frameworks",
     options: [
-      { slug: "siNodedotjs" },
-      { slug: "siExpress" },
-      { slug: "siDjango" },
-      { slug: "siFlask" },
-      { slug: "siReact" },
-      { slug: "siAngular" },
-      { slug: "siMui" },
-      { slug: "siBootstrap" },
+      { slug: "siNodedotjs", tooltip: "NodeJs" },
+      { slug: "siExpress", tooltip: "Express" },
+      { slug: "siDjango", tooltip: "Django" },
+      { slug: "siFlask", tooltip: "Flask" },
+      { slug: "siServerless", tooltip: "Serverless" },
+      { slug: "siReact", tooltip: "ReactJs" },
+      { slug: "siAngular", tooltip: "Angular" },
+      { slug: "siMui", tooltip: "Material UI" },
+      { slug: "siBootstrap", tooltip: "BootStrap" },
     ],
   },
   {
     title: "Cloud and Tools",
     options: [
-      { slug: "siAmazon" },
-      { slug: "siDocker" },
-      { slug: "siGit" },
-      { slug: "siGithub" },
+      { slug: "siAmazon", tooltip: "AWS" },
+      { slug: "siDocker", tooltip: "Docker" },
+      { slug: "siGit", tooltip: "Git" },
+      { slug: "siGithub", tooltip: "GitHub" },
       {
         slug: "siJenkins",
+        tooltip: "Jenkins",
       },
+      { slug: "siJira", tooltip: "Jira" },
+      { slug: "siAtlassian", tooltip: "Atlassian" },
     ],
   },
   {
     title: "Databases",
     options: [
-      { slug: "siMongodb" },
-      { slug: "siMysql" },
-      { slug: "siElasticsearch" },
-      { slug: "siAmazondynamodb" },
+      { slug: "siMongodb", tooltip: "Mongodb" },
+      { slug: "siMysql", tooltip: "MYSQL" },
+      { slug: "siElasticsearch", tooltip: "ElasticSearch" },
+      { slug: "siAmazondynamodb", tooltip: "DynamoDb" },
       {
         slug: "siPostgresql",
+        tooltip: "PostgreSql",
       },
+      { slug: "siRedis", tooltip: "Redis" },
     ],
   },
 ];
 
-// icons.siPostgresql;
+export const education = [
+  {
+    school: "North Carolina State University",
+    logo: "./ncsu.png",
+    degree: "Master of Computer Science",
+    location: "Raleigh, North Carolina",
+    gpa: "4/4",
+    startDate: "2024-08-19T18:10:55.126Z",
+    endDate: "",
+    coursework:
+      "Design and Analysis of Algorithms, Object Oriented Design and Development, Internet Protocols, Parallel Syatems and Software Engineering",
+  },
+  {
+    school: "Pune Institute of Computer Technology",
+    logo: "./pict.png",
+    degree: "Bachelor of Engineering",
+    location: "Pune, India",
+    gpa: "3.79/4",
+    startDate: "2018-08-31T18:10:55.126Z",
+    endDate: "2022-07-31T18:10:55.126Z",
+    coursework:
+      "Data Structures and Algorithms, Object Oriented Programming, Computer Networks, Artificial Intelligence",
+  },
+  {
+    school: "Sir Parshurambhau College",
+    degree: "Higher Secondary Education",
+    logo: "./spcollege.jpg",
+    location: "Pune, India",
+    gpa: "3.8/4",
+    startDate: "2016-08-31T18:10:55.126Z",
+    endDate: "2018-07-31T18:10:55.126Z",
+    coursework: "Mathematics, Digital Electronics, Physics, Chemistry",
+  },
+];
+
+// icons.siServerless;

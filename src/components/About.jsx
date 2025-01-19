@@ -1,6 +1,13 @@
 import * as React from "react";
 import "./home.css";
-import { Avatar, Box, Grid2, Typography, CssBaseline } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Grid2,
+  Typography,
+  CssBaseline,
+  Button,
+} from "@mui/material";
 import { about } from "../data";
 
 export default function About(props) {
@@ -11,7 +18,10 @@ export default function About(props) {
         <Grid2 container>
           <Grid2 size={7}>
             <Box className="box">
-              <Typography variant="h2">About Me</Typography>
+              <Button sx={{}}>My Latest Resume</Button>
+              <Typography variant="h2" sx={{ fontWeight: 100 }}>
+                About Me
+              </Typography>
               <Typography variant="p">{about.message}</Typography>
             </Box>
           </Grid2>

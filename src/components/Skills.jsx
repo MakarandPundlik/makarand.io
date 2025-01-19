@@ -1,6 +1,13 @@
 import * as React from "react";
 import "./home.css";
-import { Avatar, Box, Grid2, Typography, CssBaseline } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Grid2,
+  Typography,
+  CssBaseline,
+  Tooltip,
+} from "@mui/material";
 import * as icons from "simple-icons";
 import { skills } from "../data";
 
@@ -12,7 +19,9 @@ export default function Skills(props) {
         <Grid2 container>
           <Grid2 size={6}>
             <Box className="box">
-              <Typography variant="h3">Tech Stack</Typography>
+              <Typography variant="h2" sx={{ fontWeight: 100 }}>
+                Tech Stack
+              </Typography>
               <Avatar
                 variant="rounded"
                 src="./skill.svg"
@@ -27,19 +36,21 @@ export default function Skills(props) {
                   <Box>
                     <Typography
                       variant="p"
-                      sx={{ fontSize: 30, fontWeight: "light" }}
+                      sx={{ fontSize: 30, fontWeight: 100 }}
                     >
                       {skill.title}
                     </Typography>
                     <Box sx={{ display: "flex" }}>
-                      {skill.options?.map(({ slug }) => {
+                      {skill.options?.map(({ slug, tooltip }) => {
                         return (
-                          <Avatar
-                            sx={{ marginRight: "1rem" }}
-                            className="social-icon"
-                            variant="square"
-                            src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
-                          />
+                          <Tooltip title={tooltip}>
+                            <Avatar
+                              sx={{ marginRight: "1rem" }}
+                              className="social-icon"
+                              variant="square"
+                              src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
+                            />
+                          </Tooltip>
                         );
                       })}
                     </Box>

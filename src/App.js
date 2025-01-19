@@ -2,10 +2,10 @@ import "./App.css";
 import About from "./components/About";
 import ElevateAppBar from "./components/AppBar";
 import Home from "./components/Home";
-import { createTheme } from "@mui/material";
-import { ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 
 const theme = createTheme({
   palette: {
@@ -25,12 +25,14 @@ const theme = createTheme({
 function App() {
   return (
     <div className="App">
+      <CssBaseline />
       <ThemeProvider theme={theme}>
         <ElevateAppBar />
         <Home />
         <About />
         <Skills />
         <Experience />
+        <Education />
       </ThemeProvider>
     </div>
   );
