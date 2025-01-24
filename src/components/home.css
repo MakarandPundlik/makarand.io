@@ -12,6 +12,13 @@
     justify-content: center;
 }
 
+.expbox {
+    margin: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .box2 {
     margin: 5rem;
     flex-direction: row;
@@ -30,6 +37,7 @@
 
 .card {
     max-width: 15rem;
+    margin:1rem
 }
 
 .card-icon {

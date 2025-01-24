@@ -7,21 +7,23 @@ import {
   Grid2,
   CardContent,
   CardMedia,
-  Stack,
+  Typography,
+  CssBaseline,
 } from "@mui/material";
-import LocationCityOutlinedIcon from "@mui/icons-material/LocationCityOutlined";
-import Typography from "@mui/material/Typography";
-import CssBaseline from "@mui/material/CssBaseline";
+import { experience } from "../data";
 
 export default function Experience(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box className="home">
+      <Box className="expbox">
         <Grid2 container>
-          <Grid2 size={6}>
+          {/* Left Section */}
+          <Grid2 item size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
             <Box className="box">
-              <Typography variant="h3">Work Experience</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 100 }}>
+                Work Experience
+              </Typography>
               <Avatar
                 variant="rounded"
                 src="./experience.svg"
@@ -29,16 +31,36 @@ export default function Experience(props) {
               />
             </Box>
           </Grid2>
-          <Grid2 size={6}>
-            <Box className="box">
-              <Card className="card">
-                <CardMedia
-                  sx={{ height: "8rem" }}
-                  image="./nice.webp"
-                ></CardMedia>
-                <CardContent>Software Engineer</CardContent>
-              </Card>
-            </Box>
+
+          {/* Right Section */}
+          <Grid2
+            item
+            size={{ md: 12, xl: 6, xs: 12, lg: 6 }}
+            display="flex"
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
+          >
+            {experience.map((exp, index) => (
+              <Grid2 item key={index}>
+                <Card className="card">
+                  <CardMedia
+                    sx={{
+                      height: "8rem",
+                      width: "13.8rem",
+                      padding: "1em 1em 0 1em",
+                      objectFit: "contain",
+                    }}
+                    image={exp.image}
+                  />
+                  <CardContent>
+                    <Typography variant="h6" style={{ fontWeight: 200 }}>
+                      {exp.data}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid2>
+            ))}
           </Grid2>
         </Grid2>
       </Box>

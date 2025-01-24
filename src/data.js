@@ -37,7 +37,7 @@ export const landingPage = {
 
 export const about = {
   message:
-    "I am Makarand, currently pursuing Master of Computer Science at North Carolina State University at Raleigh. I am currently working as a Research Scientist at IEC Lab @NCSU. I like to watch football ⚽, play Fortnite 🎮 and eat Pizza 🍕 when I am free.",
+    "I am Makarand, currently pursuing Master of Computer Science at North Carolina State University at Raleigh. I am currently working as a Research Scientist at IEC Lab @NCSU. I like to watch football ⚽, play Fortnite 🎮 and eat Pizza 🍕 when I am free. If you are studying at NCSU you can find me hanging out around Talley!",
 };
 
 export const skills = [
@@ -132,4 +132,18 @@ export const education = [
   },
 ];
 
+export const experience = [
+  {
+    image: "./ncsu.png",
+    data: "Research Intern",
+  },
+  {
+    image: "./nice.webp",
+    data: "Software Engineer",
+  },
+  {
+    image: "./imatmi.gif",
+    data: "FUll Stack Intern",
+  },
+];
 // icons.siServerless;
