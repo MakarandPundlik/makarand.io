@@ -23,7 +23,7 @@ export default function About(props) {
           sx={{ minHeight: "100vh" }}
           marginLeft="10%"
         >
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             <Box
               sx={{
                 margin: "1rem",
@@ -35,7 +35,7 @@ export default function About(props) {
               <Typography variant="p">{about.message}</Typography>
             </Box>
           </Grid2>
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             <Box sx={{ margin: "1rem" }}>
               <Avatar
                 variant="rounded"

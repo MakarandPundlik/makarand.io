@@ -24,7 +24,7 @@ export default function Skills(props) {
           sx={{ minHeight: "100vh" }}
           marginLeft="10%"
         >
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             <Typography variant="h2" sx={{ fontWeight: 100 }}>
               Tech Stack
             </Typography>
@@ -34,10 +34,10 @@ export default function Skills(props) {
               style={{ height: "60vh", width: "80vh" }}
             />
           </Grid2>
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             {skills.map((skill) => {
               return (
-                <Box>
+                <Box margin="1rem">
                   <Typography
                     variant="p"
                     sx={{ fontSize: 30, fontWeight: 100 }}

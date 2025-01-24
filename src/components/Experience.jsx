@@ -25,7 +25,7 @@ export default function Experience(props) {
         marginLeft="10%"
       >
         {/* Left Section */}
-        <Grid2 item size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
+        <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
           <Typography variant="h3" sx={{ fontWeight: 100 }}>
             Work Experience
           </Typography>
@@ -41,7 +41,7 @@ export default function Experience(props) {
           container
           padding={0}
           margin={0}
-          size={{ md: 12, xl: 6, xs: 12, lg: 6 }}
+          size={{ lg: 12, sx: 12, xl: 6, md: 12 }}
           alignItems="center"
           justifyContent="center"
         >

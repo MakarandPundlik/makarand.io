@@ -17,7 +17,7 @@ export default function Home(props) {
           sx={{ minHeight: "100vh" }}
           marginLeft="10%"
         >
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             <Typography variant="h4" sx={{ fontWeight: 100 }}>
               Hi, I am
             </Typography>
@@ -50,7 +50,7 @@ export default function Home(props) {
               })}
             </Box>
           </Grid2>
-          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
+          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
             <Box className="box2">
               <Avatar
                 variant="rounded"
