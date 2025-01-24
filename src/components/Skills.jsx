@@ -17,7 +17,7 @@ export default function Skills(props) {
       <CssBaseline />
       <Box className="home">
         <Grid2 container>
-          <Grid2 size={6}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box">
               <Typography variant="h2" sx={{ fontWeight: 100 }}>
                 Tech Stack
@@ -29,7 +29,7 @@ export default function Skills(props) {
               />
             </Box>
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box">
               {skills.map((skill) => {
                 return (

@@ -10,7 +10,7 @@ export default function Home(props) {
     <React.Fragment>
       <Box className="home">
         <Grid2 container>
-          <Grid2 size={6}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box">
               <Typography variant="h4" sx={{ fontWeight: 100 }}>
                 Hi, I am
@@ -45,7 +45,7 @@ export default function Home(props) {
               </Box>
             </Box>
           </Grid2>
-          <Grid2 size={6}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box2">
               <Avatar
                 variant="rounded"

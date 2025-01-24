@@ -143,7 +143,7 @@ export const experience = [
   },
   {
     image: "./imatmi.gif",
-    data: "FUll Stack Intern",
+    data: "Project Intern",
   },
 ];
 // icons.siServerless;

@@ -16,7 +16,7 @@ export default function About(props) {
       <CssBaseline />
       <Box className="home">
         <Grid2 container>
-          <Grid2 size={7}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box">
               <Button sx={{}}>My Latest Resume</Button>
               <Typography variant="h2" sx={{ fontWeight: 100 }}>
@@ -25,7 +25,7 @@ export default function About(props) {
               <Typography variant="p">{about.message}</Typography>
             </Box>
           </Grid2>
-          <Grid2 size={5}>
+          <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
             <Box className="box">
               <Avatar
                 variant="rounded"
