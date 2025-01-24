@@ -8,83 +8,70 @@ import {
   Grid2,
   Typography,
   CssBaseline,
+  CardMedia,
 } from "@mui/material";
-import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
-import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import { education } from "../data";
 
 export default function Education(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box className="home">
-        <Box className="box">
-          <Typography variant="h3" sx={{ fontWeight: 100, marginLeft: "1rem" }}>
+
+      <Grid2
+        container
+        padding="0"
+        spacing={0}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ minHeight: "100vh" }}
+      >
+        {/* Left Section */}
+        {/* <Grid2 item size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
+          <Typography variant="h3" sx={{ fontWeight: 100 }}>
             Education
           </Typography>
-          <Grid2
-            container
-            display="flex"
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {/* <Box sx={{ display: "flex" }}> */}
-            {education.map(
-              ({ school, degree, startDate, endDate, coursework, logo }) => {
-                return (
-                  <Grid2 item size={{ md: 6, xl: 6, xs: 12, lg: 6 }}>
-                    <Card
-                      variant="elevation"
-                      sx={{ margin: "1rem", maxWidth: "30rem" }}
-                    >
-                      <CardContent>
-                        <Box sx={{ display: "flex", marginBottom: "1rem" }}>
-                          <Avatar
-                            variant="rounded"
-                            src={logo}
-                            sx={{ marginRight: "1rem", height: "2rem" }}
-                          />
-                          <Typography variant="p" sx={{ fontWeight: 100 }}>
-                            {school}
-                          </Typography>
-                        </Box>
+          <Avatar
+            variant="rounded"
+            src="./education.png"
+            style={{ height: "50vh", width: "60vh" }}
+          />
+        </Grid2> */}
 
-                        <Box sx={{ display: "flex", marginBottom: "1rem" }}>
-                          <SchoolRoundedIcon
-                            sx={{ marginRight: "1rem", fontSize: "2rem" }}
-                          />
-                          <Typography variant="p" sx={{ fontWeight: 100 }}>
-                            {degree}
-                          </Typography>
-                        </Box>
-
-                        <Box sx={{ display: "flex", marginBottom: "1rem" }}>
-                          <DateRangeRoundedIcon
-                            sx={{ marginRight: "1rem", fontSize: "2rem" }}
-                          />
-                          <Typography variant="p" sx={{ fontWeight: 100 }}>
-                            {!endDate
-                              ? `${startDate.substring(0, 10)} - Present`
-                              : `${startDate.substring(
-                                  0,
-                                  10
-                                )} - ${endDate.substring(0, 10)}`}
-                          </Typography>
-                        </Box>
-                        <Typography variant="p">
-                          Coursework: {" " + coursework}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Grid2>
-                );
-              }
-            )}
-            {/* </Box> */}
+        {/* Right Section */}
+        {/* <Grid2
+          container
+          size={{ md: 12, xl: 6, xs: 12, lg: 6 }}
+          justifyContent="center"
+          spacing={10}
+        > */}
+        <Grid2 item size={{ md: 12, xl: 12, xs: 12, lg: 12 }}>
+          <Typography variant="h3" sx={{ fontWeight: 100, marginLeft: "1%" }}>
+            Education
+          </Typography>
+        </Grid2>
+        {education.map((edu, index) => (
+          <Grid2 item key={index} size={{ md: 6, xl: 4, xs: 12, lg: 6 }}>
+            <Card sx={{ margin: "1rem", maxWidth: "25rem" }}>
+              <CardMedia
+                sx={{
+                  height: "15rem",
+                }}
+                image={edu.image}
+              />
+              <CardContent>
+                <Box display="flex" flexDirection="column">
+                  <Typography variant="h6">{edu.degree}</Typography>
+                  <Typography variant="p" style={{ fontWeight: 200 }}>
+                    {edu.coursework}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
           </Grid2>
-        </Box>
-      </Box>
+        ))}
+      </Grid2>
+
+      {/* </Grid2> */}
     </React.Fragment>
   );
 }

@@ -16,20 +16,24 @@ export default function Experience(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-
-      <Grid2 container>
+      <Grid2
+        container
+        spacing={10}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ minHeight: "100vh" }}
+        marginLeft="10%"
+      >
         {/* Left Section */}
         <Grid2 item size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
-          <Box className="box">
-            <Typography variant="h3" sx={{ fontWeight: 100 }}>
-              Work Experience
-            </Typography>
-            <Avatar
-              variant="rounded"
-              src="./experience.svg"
-              style={{ height: "60vh", width: "80vh" }}
-            />
-          </Box>
+          <Typography variant="h3" sx={{ fontWeight: 100 }}>
+            Work Experience
+          </Typography>
+          <Avatar
+            variant="rounded"
+            src="./experience.svg"
+            style={{ height: "60vh", width: "80vh" }}
+          />
         </Grid2>
 
         {/* Right Section */}
@@ -51,9 +55,7 @@ export default function Experience(props) {
                   image={exp.image}
                 />
                 <CardContent>
-                  <Typography variant="h6" style={{ fontWeight: 200 }}>
-                    {exp.data}
-                  </Typography>
+                  <Typography variant="h6">{exp.position}</Typography>
                 </CardContent>
               </Card>
             </Grid2>

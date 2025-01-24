@@ -14,11 +14,21 @@ export default function About(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Box className="home">
-        <Grid2 container>
+      <Box className="home" alignItems="center" justifyContent="center">
+        <Grid2
+          container
+          spacing={10}
+          alignItems="center"
+          justifyContent="center"
+          sx={{ minHeight: "100vh" }}
+          marginLeft="10%"
+        >
           <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
-            <Box className="box">
-              <Button sx={{}}>My Latest Resume</Button>
+            <Box
+              sx={{
+                margin: "1rem",
+              }}
+            >
               <Typography variant="h2" sx={{ fontWeight: 100 }}>
                 About Me
               </Typography>
@@ -26,7 +36,7 @@ export default function About(props) {
             </Box>
           </Grid2>
           <Grid2 item size={{ lg: 6, sx: 12, xl: 6, md: 12 }}>
-            <Box className="box">
+            <Box sx={{ margin: "1rem" }}>
               <Avatar
                 variant="rounded"
                 src="./me2.jpeg"

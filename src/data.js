@@ -100,7 +100,7 @@ export const skills = [
 export const education = [
   {
     school: "North Carolina State University",
-    logo: "./ncsu.png",
+    image: "./ncsu.png",
     degree: "Master of Computer Science",
     location: "Raleigh, North Carolina",
     gpa: "4/4",
@@ -111,7 +111,7 @@ export const education = [
   },
   {
     school: "Pune Institute of Computer Technology",
-    logo: "./pict.png",
+    image: "./pict.png",
     degree: "Bachelor of Engineering",
     location: "Pune, India",
     gpa: "3.79/4",
@@ -123,7 +123,7 @@ export const education = [
   {
     school: "Sir Parshurambhau College",
     degree: "Higher Secondary Education",
-    logo: "./spcollege.jpg",
+    image: "./spcollege.jpg",
     location: "Pune, India",
     gpa: "3.8/4",
     startDate: "2016-08-31T18:10:55.126Z",
@@ -135,15 +135,15 @@ export const education = [
 export const experience = [
   {
     image: "./ncsu.png",
-    data: "Research Intern",
+    position: "Research Intern",
   },
   {
     image: "./nice.webp",
-    data: "Software Engineer",
+    position: "Software Engineer",
   },
   {
     image: "./imatmi.gif",
-    data: "Project Intern",
+    position: "Project Intern",
   },
 ];
 // icons.siServerless;

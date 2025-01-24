@@ -1,45 +1,5 @@
 .home{
     min-height: 90vh;
     font-weight: 100;
-    /* box-sizing: border-box; */
-    /* Prevent padding from adding extra height */
 }
 
-.box {
-    margin: 10rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.expbox {
-    margin: 1rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.box2 {
-    margin: 5rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-box {
-    display: flex;
-    justify-content: left;
-}
-
-.social-icon {
-    margin: 1rem 2rem 1rem 0rem;
-}
-
-.card {
-    max-width: 15rem;
-    margin:1rem
-}
-
-.card-icon {
-    height: "7vh"; width: "10vh"; margin-bottom: "2rem"
-}
