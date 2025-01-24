@@ -33,7 +33,7 @@ export default function Education(props) {
             {education.map(
               ({ school, degree, startDate, endDate, coursework, logo }) => {
                 return (
-                  <Grid2 item size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
+                  <Grid2 item size={{ md: 6, xl: 6, xs: 12, lg: 6 }}>
                     <Card
                       variant="elevation"
                       sx={{ margin: "1rem", maxWidth: "30rem" }}

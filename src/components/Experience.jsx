@@ -43,12 +43,11 @@ export default function Experience(props) {
             justifyContent="center"
           >
             {experience.map((exp, index) => (
-              <Grid2 item key={index} size={{ md: 12, xl: 6, xs: 12, lg: 6 }}>
+              <Grid2 item key={index} size={{ md: 6, xl: 6, xs: 12, lg: 6 }}>
                 <Card className="card">
                   <CardMedia
                     sx={{
                       height: "8rem",
-                      objectFit: "contain",
                     }}
                     image={exp.image}
                   />
