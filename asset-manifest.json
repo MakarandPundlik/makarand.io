@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a68822fa.css",
-    "main.js": "/static/js/main.eaec7afa.js",
-    "static/js/488.5ea689d0.chunk.js": "/static/js/488.5ea689d0.chunk.js",
-    "index.html": "/index.html",
-    "main.a68822fa.css.map": "/static/css/main.a68822fa.css.map",
-    "main.eaec7afa.js.map": "/static/js/main.eaec7afa.js.map",
-    "488.5ea689d0.chunk.js.map": "/static/js/488.5ea689d0.chunk.js.map"
+    "main.css": "/makarand.io/static/css/main.a68822fa.css",
+    "main.js": "/makarand.io/static/js/main.8bc8024e.js",
+    "static/js/488.5ea689d0.chunk.js": "/makarand.io/static/js/488.5ea689d0.chunk.js",
+    "index.html": "/makarand.io/index.html",
+    "main.a68822fa.css.map": "/makarand.io/static/css/main.a68822fa.css.map",
+    "main.8bc8024e.js.map": "/makarand.io/static/js/main.8bc8024e.js.map",
+    "488.5ea689d0.chunk.js.map": "/makarand.io/static/js/488.5ea689d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a68822fa.css",
-    "static/js/main.eaec7afa.js"
+    "static/js/main.8bc8024e.js"
   ]
 }
