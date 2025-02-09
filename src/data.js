@@ -155,22 +155,70 @@ export const experience = [
 
 export const projects = [
   {
-    image: "./ncsu.png",
-    title: "Movie Mood",
-    data: "Movie Mood is a personalized movie recommendation platform that matches suggestions to your mood, eliminating endless scrolling. Powered by an advanced Mood-Based Recommendation Algorithm, it brings the perfect movie to your screen instantly.",
-    github: "https://github.com/GradHackersGuild/CSC-510-Movie-Mood",
-  },
-  {
-    image: "./ncsu.png",
+    image: "./packtravel.png",
     title: "Pack Travel",
     data: "Most of the university students do not have a car to travel off-campus and rely mostly on the Wolfline. But what if someone wants to travel outside Wolfline's limit? Well... why not collaborate on PackTravel to travel off-campus by a cab, rental car, etc.",
-    github: "https://github.com/GradHackersGuild/PackTravel-Old",
+    techStack: [
+      {
+        slug: "siGithub",
+        tooltip: "GitHub",
+        link: "https://github.com/GradHackersGuild/PackTravel-Old",
+      },
+      { slug: "siDjango", tooltip: "Django" },
+      { slug: "siHtml5", tooltip: "HTML5" },
+      { slug: "siCss3", tooltip: "CSS3" },
+      { slug: "siJavascript", tooltip: "JavaScript" },
+      { slug: "siMongodb", tooltip: "Mongodb" },
+    ],
   },
   {
-    image: "./ncsu.png",
-    title: "Research Intern",
+    image: "./imatmi.gif",
+    title: "The Art of Success",
+    data: "The Art of Success is a full-stack web application built using the MERN stack. It serves as a platform to connect dyslexic students with specialized mentors using a matching algorithm. The platform ensures complete anonymity during chat sessions and provides parents with the ability to monitor their child’s progress through a secure login system.",
+    techStack: [
+      {
+        slug: "siGithub",
+        tooltip: "GitHub",
+        link: "https://github.com/MakarandPundlik/covidtracker",
+      },
+      { slug: "siNodedotjs", tooltip: "NodeJs" },
+      { slug: "siExpress", tooltip: "Express" },
+      { slug: "siReact", tooltip: "ReactJs" },
+      { slug: "siMui", tooltip: "Material UI" },
+      { slug: "siRedis", tooltip: "Redis" },
+      { slug: "siMongodb", tooltip: "Mongodb" },
+    ],
+  },
+  {
+    image: "./covid.webp",
+    title: "Covid 19 Tracker",
+    data: "The COVID-19 Tracker is a dynamic and interactive web application. It provides real-time visualization of COVID-19 cases and deaths worldwide by fetching data from the World Health Organization (WHO) API.",
+    techStack: [
+      {
+        slug: "siGithub",
+        tooltip: "GitHub",
+        link: "https://github.com/MakarandPundlik/covidtracker",
+      },
+      { slug: "siReact", tooltip: "ReactJs" },
+      { slug: "siBootstrap", tooltip: "BootStrap" },
+    ],
+  },
+  {
+    image: "./moviemood.gif",
+    title: "Movie Mood",
     data: "Movie Mood is a personalized movie recommendation platform that matches suggestions to your mood, eliminating endless scrolling. Powered by an advanced Mood-Based Recommendation Algorithm, it brings the perfect movie to your screen instantly.",
-    github: "https://github.com/GradHackersGuild/CSC-510-Movie-Mood",
+    techStack: [
+      {
+        slug: "siGithub",
+        tooltip: "GitHub",
+        link: "https://github.com/GradHackersGuild/CSC-510-Movie-Mood",
+      },
+      { slug: "siFlask", tooltip: "Flask" },
+      { slug: "siHtml5", tooltip: "HTML5" },
+      { slug: "siCss3", tooltip: "CSS3" },
+      { slug: "siJavascript", tooltip: "JavaScript" },
+      { slug: "siMysql", tooltip: "MYSQL" },
+    ],
   },
 ];
 

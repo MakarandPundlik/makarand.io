@@ -32,7 +32,9 @@ export default function About(props) {
               <Typography variant="h2" sx={{ fontWeight: 100 }}>
                 About Me
               </Typography>
-              <Typography variant="p">{about.message}</Typography>
+              <Typography variant="p" sx={{ lineHeight: "1.5rem" }}>
+                {about.message}
+              </Typography>
             </Box>
           </Grid2>
           <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
@@ -40,7 +42,7 @@ export default function About(props) {
               <Avatar
                 variant="rounded"
                 src="./me2.jpeg"
-                style={{ height: "45vh", width: "45vh" }}
+                style={{ height: "55vh", width: "55vh" }}
               />
             </Box>
           </Grid2>

@@ -24,7 +24,7 @@ export default function Experience(props) {
       >
         {/* Left Section */}
         <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
-          <Typography variant="h3" sx={{ fontWeight: 100 }}>
+          <Typography variant="h2" sx={{ fontWeight: 100 }}>
             Work Experience
           </Typography>
           <Avatar

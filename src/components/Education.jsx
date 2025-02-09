@@ -20,9 +20,9 @@ export default function Experience(props) {
         container
         alignItems="center"
         justifyContent="center"
-        sx={{ minHeight: "100vh" }}
+        sx={{ minHeight: "100vh", marginTop: "10rem" }}
       >
-        <Typography variant="h3" sx={{ fontWeight: 100 }}>
+        <Typography variant="h2" sx={{ fontWeight: 100 }}>
           Projects
         </Typography>
         {/* Left Section */}
@@ -50,20 +50,28 @@ export default function Experience(props) {
                     <Typography variant="p" sx={{ fontWeight: 300 }}>
                       {exp.data}
                     </Typography>
-                    <Typography variant="p">
-                      <Link
-                        target="_blank"
-                        color="inherit"
-                        sx={{ textDecoration: "none" }}
-                        href={exp.github}
-                      >
-                        <Avatar
-                          className="social-icon"
-                          variant="square"
-                          src={`https://cdn.simpleicons.org/${icons["siGithub"].slug}`}
-                        />
-                      </Link>
-                    </Typography>
+                    <Grid2 container spacing={2}>
+                      {exp.techStack?.map((icon) => {
+                        return (
+                          <Typography variant="p">
+                            <Link
+                              target="_blank"
+                              color="inherit"
+                              sx={{ textDecoration: "none" }}
+                              href={icon.link}
+                            >
+                              <Avatar
+                                className="social-icon"
+                                variant="square"
+                                src={`https://cdn.simpleicons.org/${
+                                  icons[icon.slug].slug
+                                }`}
+                              />
+                            </Link>
+                          </Typography>
+                        );
+                      })}
+                    </Grid2>
                   </Grid2>
                 </CardContent>
               </Card>
