@@ -20,7 +20,6 @@ export default function Skills(props) {
           container
           spacing={10}
           alignItems="center"
-          justifyContent="center"
           sx={{ minHeight: "100vh" }}
           marginLeft="10%"
         >

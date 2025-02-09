@@ -136,14 +136,42 @@ export const experience = [
   {
     image: "./ncsu.png",
     position: "Research Intern",
+    data: "I am currently building WebAplus in collaboration with Carnegie Mellon University",
+    dates: "Jan 2025 - Present",
   },
   {
     image: "./nice.webp",
     position: "Software Engineer",
+    data: " I designed a high-performance bulk file upload API backend using TypeScript, optimized AWS Lambda Authorizer performance by 25% through caching.",
+    dates: "July 2022 - July 2024",
   },
   {
     image: "./imatmi.gif",
     position: "Project Intern",
+    dates: "August 2021 - Apr 2022",
+    data: "Designed and developed full stack web application for students with dyslexia. I also engineered a geo location based matching algorithm for efficient student and mentor pairing. ",
   },
 ];
+
+export const projects = [
+  {
+    image: "./ncsu.png",
+    title: "Movie Mood",
+    data: "Movie Mood is a personalized movie recommendation platform that matches suggestions to your mood, eliminating endless scrolling. Powered by an advanced Mood-Based Recommendation Algorithm, it brings the perfect movie to your screen instantly.",
+    github: "https://github.com/GradHackersGuild/CSC-510-Movie-Mood",
+  },
+  {
+    image: "./ncsu.png",
+    title: "Pack Travel",
+    data: "Most of the university students do not have a car to travel off-campus and rely mostly on the Wolfline. But what if someone wants to travel outside Wolfline's limit? Well... why not collaborate on PackTravel to travel off-campus by a cab, rental car, etc.",
+    github: "https://github.com/GradHackersGuild/PackTravel-Old",
+  },
+  {
+    image: "./ncsu.png",
+    title: "Research Intern",
+    data: "Movie Mood is a personalized movie recommendation platform that matches suggestions to your mood, eliminating endless scrolling. Powered by an advanced Mood-Based Recommendation Algorithm, it brings the perfect movie to your screen instantly.",
+    github: "https://github.com/GradHackersGuild/CSC-510-Movie-Mood",
+  },
+];
+
 // icons.siServerless;

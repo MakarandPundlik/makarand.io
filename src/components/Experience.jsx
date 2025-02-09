@@ -2,11 +2,10 @@ import * as React from "react";
 import "./home.css";
 import {
   Avatar,
-  Box,
   Card,
   Grid2,
   CardContent,
-  CardMedia,
+  Box,
   Typography,
   CssBaseline,
 } from "@mui/material";
@@ -18,7 +17,6 @@ export default function Experience(props) {
       <CssBaseline />
       <Grid2
         container
-        spacing={10}
         alignItems="center"
         justifyContent="center"
         sx={{ minHeight: "100vh" }}
@@ -39,23 +37,37 @@ export default function Experience(props) {
         {/* Right Section */}
         <Grid2
           container
-          padding={0}
-          margin={0}
-          size={{ lg: 12, sx: 12, xl: 6, md: 12 }}
+          spacing={2}
+          size={{ lg: 6, sx: 12, xl: 6, md: 6 }}
           alignItems="center"
           justifyContent="center"
+          // sx={{ marginRight: "1rem" }}
         >
           {experience.map((exp, index) => (
             <Grid2 item key={index} size={{ md: 6, xl: 6, xs: 12, lg: 6 }}>
-              <Card className="card">
-                <CardMedia
-                  sx={{
-                    height: "8rem",
-                  }}
-                  image={exp.image}
-                />
+              <Card sx={{ marginRight: "2rem", marginTop: "2rem" }}>
                 <CardContent>
-                  <Typography variant="h6">{exp.position}</Typography>
+                  <Grid2 container spacing={2}>
+                    <Grid2 item>
+                      <Avatar
+                        sx={{
+                          height: "3rem",
+                          width: "3rem",
+                        }}
+                        variant="rounded"
+                        src={exp.image}
+                      />
+                    </Grid2>
+                    <Grid2 item>
+                      <Typography variant="h6" sx={{ fontWeight: 400 }}>
+                        {exp.position}
+                      </Typography>
+                    </Grid2>
+                    <Typography variant="p" sx={{ fontWeight: 300 }}>
+                      {exp.data}
+                    </Typography>
+                    <Typography variant="p">{exp.dates}</Typography>
+                  </Grid2>
                 </CardContent>
               </Card>
             </Grid2>
