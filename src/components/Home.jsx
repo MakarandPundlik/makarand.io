@@ -1,6 +1,14 @@
 import * as React from "react";
 import "./home.css";
-import { Avatar, Box, Button, Grid2, Tooltip, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid2,
+  Link,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import * as icons from "simple-icons";
 import { ReactTyped } from "react-typed";
 import { landingPage } from "../data.js";
@@ -36,16 +44,18 @@ export default function Home(props) {
             <Box className="social-box">
               {landingPage.socials.map(({ slug, link, tooltip }) => {
                 return (
-                  <Button href={link}>
-                    <Tooltip title={tooltip}>
-                      {" "}
-                      <Avatar
-                        className="social-icon"
-                        variant="square"
-                        src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
-                      />
-                    </Tooltip>
-                  </Button>
+                  <Link target="_blank" href={link}>
+                    <Button>
+                      <Tooltip title={tooltip}>
+                        {" "}
+                        <Avatar
+                          className="social-icon"
+                          variant="square"
+                          src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
+                        />
+                      </Tooltip>
+                    </Button>
+                  </Link>
                 );
               })}
             </Box>
