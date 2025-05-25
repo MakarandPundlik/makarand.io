@@ -5,7 +5,7 @@ export const landingPage = {
     {
       slug: "siGmail",
       tooltip: "Gmail",
-      link: "mailto:mpundli@ncsu.edu",
+      link: "mailto:mpundli@ncsu.edu?subject=test&body=test",
     },
     {
       slug: "siInstagram",
