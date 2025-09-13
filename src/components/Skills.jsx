@@ -1,68 +1,335 @@
-import * as React from "react";
-import "./home.css";
-import {
-  Avatar,
-  Box,
-  Grid2,
-  Typography,
-  CssBaseline,
-  Tooltip,
-} from "@mui/material";
-import * as icons from "simple-icons";
-import { skills } from "../data";
+import React from 'react';
+import { Box, Container, Typography, Grid, Card, CardContent, LinearProgress, useTheme, useMediaQuery } from '@mui/material';
+import { motion } from 'framer-motion';
+import { Code, Palette, Storage, CloudQueue, PhoneAndroid, Build } from '@mui/icons-material';
 
-export default function Skills(props) {
+const Skills = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const skillCategories = [
+    {
+      title: 'Frontend Development',
+      icon: <Code />,
+      color: '#00D4FF',
+      skills: [
+        { name: 'React', level: 95 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'Vue.js', level: 80 },
+        { name: 'HTML5/CSS3', level: 95 },
+        { name: 'Sass/SCSS', level: 85 },
+      ]
+    },
+    {
+      title: 'Backend Development',
+      icon: <Storage />,
+      color: '#FF6B6B',
+      skills: [
+        { name: 'Node.js', level: 90 },
+        { name: 'Python', level: 85 },
+        { name: 'Express.js', level: 88 },
+        { name: 'REST APIs', level: 92 },
+        { name: 'GraphQL', level: 75 },
+        { name: 'Microservices', level: 80 },
+      ]
+    },
+    {
+      title: 'Database & Storage',
+      icon: <Storage />,
+      color: '#4CAF50',
+      skills: [
+        { name: 'MongoDB', level: 88 },
+        { name: 'PostgreSQL', level: 85 },
+        { name: 'Redis', level: 80 },
+        { name: 'MySQL', level: 82 },
+        { name: 'Firebase', level: 75 },
+        { name: 'Elasticsearch', level: 70 },
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: <CloudQueue />,
+      color: '#FF9800',
+      skills: [
+        { name: 'AWS', level: 85 },
+        { name: 'Docker', level: 88 },
+        { name: 'Kubernetes', level: 75 },
+        { name: 'CI/CD', level: 82 },
+        { name: 'Terraform', level: 70 },
+        { name: 'Monitoring', level: 78 },
+      ]
+    },
+    {
+      title: 'Mobile Development',
+      icon: <PhoneAndroid />,
+      color: '#9C27B0',
+      skills: [
+        { name: 'React Native', level: 80 },
+        { name: 'Flutter', level: 70 },
+        { name: 'iOS Development', level: 65 },
+        { name: 'Android Development', level: 68 },
+        { name: 'PWA', level: 85 },
+        { name: 'Mobile UI/UX', level: 82 },
+      ]
+    },
+    {
+      title: 'Design & Tools',
+      icon: <Palette />,
+      color: '#E91E63',
+      skills: [
+        { name: 'Figma', level: 90 },
+        { name: 'Adobe Creative Suite', level: 85 },
+        { name: 'Sketch', level: 80 },
+        { name: 'Git', level: 92 },
+        { name: 'Webpack', level: 78 },
+        { name: 'Testing (Jest)', level: 85 },
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut'
+      }
+    }
+  };
+
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Box className="home">
-        <Grid2
-          container
-          spacing={10}
-          alignItems="center"
-          sx={{ minHeight: "100vh" }}
-          marginLeft="10%"
+    <Box
+      id="skills"
+      sx={{
+        py: 8,
+        background: 'linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%)',
+        position: 'relative',
+      }}
+    >
+      <Container maxWidth="lg">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
-            <Typography variant="h2" sx={{ fontWeight: 100 }}>
-              Tech Stack
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Skills & Expertise
             </Typography>
-            <Avatar
-              variant="rounded"
-              src="./skill.svg"
-              style={{ height: "60vh", width: "80vh" }}
-            />
-          </Grid2>
-          <Grid2 item size={{ lg: 12, sx: 12, xl: 6, md: 12 }}>
-            {skills.map((skill) => {
-              return (
-                <Box margin="1rem">
-                  <Typography
-                    variant="p"
-                    sx={{ fontSize: 30, fontWeight: 100 }}
+            <Typography
+              variant="h6"
+              sx={{
+                color: 'text.secondary',
+                maxWidth: '600px',
+                margin: '0 auto',
+              }}
+            >
+              A comprehensive overview of my technical skills and areas of expertise
+            </Typography>
+          </Box>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Grid container spacing={4}>
+            {skillCategories.map((category, categoryIndex) => (
+              <Grid item xs={12} md={6} lg={4} key={categoryIndex}>
+                <motion.div variants={itemVariants}>
+                  <Card
+                    sx={{
+                      height: '100%',
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(0, 212, 255, 0.1)',
+                      borderRadius: 3,
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        transform: 'translateY(-5px)',
+                        borderColor: 'rgba(0, 212, 255, 0.3)',
+                        boxShadow: '0 20px 40px rgba(0, 212, 255, 0.1)',
+                      },
+                    }}
                   >
-                    {skill.title}
-                  </Typography>
-                  <Box sx={{ display: "flex" }}>
-                    {skill.options?.map(({ slug, tooltip }) => {
-                      return (
-                        <Tooltip title={tooltip}>
-                          <Avatar
-                            sx={{ marginRight: "1rem" }}
-                            className="social-icon"
-                            variant="square"
-                            src={`https://cdn.simpleicons.org/${icons[slug].slug}`}
-                          />
-                        </Tooltip>
-                      );
-                    })}
+                    <CardContent sx={{ p: 3 }}>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          mb: 3,
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            width: 50,
+                            height: 50,
+                            borderRadius: '50%',
+                            background: `linear-gradient(135deg, ${category.color}20, ${category.color}40)`,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            mr: 2,
+                            border: `2px solid ${category.color}40`,
+                          }}
+                        >
+                          <Box sx={{ color: category.color, fontSize: '1.5rem' }}>
+                            {category.icon}
+                          </Box>
+                        </Box>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: 600,
+                            color: 'text.primary',
+                          }}
+                        >
+                          {category.title}
+                        </Typography>
+                      </Box>
+
+                      <Box sx={{ space: 2 }}>
+                        {category.skills.map((skill, skillIndex) => (
+                          <Box key={skillIndex} sx={{ mb: 2 }}>
+                            <Box
+                              sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                mb: 1,
+                              }}
+                            >
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  fontWeight: 500,
+                                  color: 'text.primary',
+                                }}
+                              >
+                                {skill.name}
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  color: 'text.secondary',
+                                  fontSize: '0.875rem',
+                                }}
+                              >
+                                {skill.level}%
+                              </Typography>
+                            </Box>
+                            <LinearProgress
+                              variant="determinate"
+                              value={skill.level}
+                              sx={{
+                                height: 8,
+                                borderRadius: 4,
+                                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                '& .MuiLinearProgress-bar': {
+                                  background: `linear-gradient(90deg, ${category.color} 0%, ${category.color}CC 100%)`,
+                                  borderRadius: 4,
+                                },
+                              }}
+                            />
+                          </Box>
+                        ))}
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Grid>
+            ))}
+          </Grid>
+        </motion.div>
+
+        {/* Additional Skills Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <Box sx={{ mt: 8, textAlign: 'center' }}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 600,
+                mb: 4,
+                color: 'text.primary',
+              }}
+            >
+              Additional Skills
+            </Typography>
+            
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center' }}>
+              {[
+                'Agile/Scrum', 'Project Management', 'Team Leadership', 'Code Review',
+                'Performance Optimization', 'Security Best Practices', 'API Design',
+                'Responsive Design', 'Cross-browser Compatibility', 'SEO Optimization',
+                'Accessibility (WCAG)', 'Internationalization', 'Version Control',
+                'Documentation', 'Mentoring', 'Problem Solving'
+              ].map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Box
+                    sx={{
+                      px: 3,
+                      py: 1.5,
+                      borderRadius: 3,
+                      background: 'rgba(0, 212, 255, 0.1)',
+                      border: '1px solid rgba(0, 212, 255, 0.3)',
+                      color: 'primary.main',
+                      fontWeight: 500,
+                      fontSize: '0.9rem',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        background: 'rgba(0, 212, 255, 0.2)',
+                        transform: 'translateY(-2px)',
+                      },
+                    }}
+                  >
+                    {skill}
                   </Box>
-                </Box>
-              );
-            })}
-          </Grid2>
-        </Grid2>
-      </Box>
-    </React.Fragment>
+                </motion.div>
+              ))}
+            </Box>
+          </Box>
+        </motion.div>
+      </Container>
+    </Box>
   );
-}
+};
+
+export default Skills;
