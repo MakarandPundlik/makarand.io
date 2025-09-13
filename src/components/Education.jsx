@@ -13,29 +13,29 @@ const Education = () => {
       institution: 'North Carolina State University',
       location: 'Raleigh, NC',
       duration: '2021 - 2023',
-      gpa: '3.8/4.0',
-      description: 'Specialized in Software Engineering and Machine Learning with focus on full-stack development and data science applications.',
-      coursework: ['Advanced Software Engineering', 'Machine Learning', 'Database Systems', 'Computer Networks', 'Algorithms and Data Structures', 'Human-Computer Interaction'],
-      achievements: ['Dean\'s List for 3 consecutive semesters', 'Graduate Research Assistant', 'Published 2 research papers in peer-reviewed journals', 'Led capstone project on AI-powered web applications']
+      gpa: '4.0/4.0',
+      description: 'Specialized in Software Engineering and Cloud Computing',
+      coursework: ['Software Engineering', 'Data Structures and Algorithms', 'Cloud Computing', 'Object-Oriented Design and Development', 'Internet Protocols'],
+      achievements: ['A+ in Algorithms, OODD and SE', 'Graduate Research Intern']
     },
     {
-      degree: 'Bachelor of Technology in Computer Engineering',
-      institution: 'University of Mumbai',
-      location: 'Mumbai, India',
+      degree: 'Bachelor of Technology in Electronics and Telecommunication Engineering',
+      institution: 'Pune Institute of Computer Technology',
+      location: 'Pune, India',
       duration: '2017 - 2021',
-      gpa: '3.6/4.0',
-      description: 'Comprehensive study of computer engineering fundamentals with emphasis on software development and system design.',
-      coursework: ['Data Structures and Algorithms', 'Object-Oriented Programming', 'Computer Networks', 'Operating Systems', 'Software Engineering', 'Database Management Systems'],
-      achievements: ['First Class with Distinction', 'President of Computer Science Society', 'Won 3rd place in National Coding Competition', 'Completed 5+ personal projects']
+      gpa: '3.79/4.0',
+      description: 'Comprehensive study of electronics and telecommunication engineering fundamentals with emphasis on software development and system design.',
+      coursework: ['Data Structures and Algorithms', 'Object-Oriented Programming', 'Computer Networks', 'Operating Systems', 'Software Engineering', 'Database Management Systems', 'Digital Signal Processing', 'Wireless Communication', 'Antenna Design', 'Microwave Engineering'],
+      achievements: ['First Class with Distinction', 'Multiple Hackathons']
     }
   ];
 
-  const certifications = [
-    { name: 'AWS Certified Solutions Architect', issuer: 'Amazon Web Services', date: '2023' },
-    { name: 'Google Cloud Professional Developer', issuer: 'Google Cloud', date: '2022' },
-    { name: 'Certified Kubernetes Administrator', issuer: 'Cloud Native Computing Foundation', date: '2022' },
-    { name: 'React Developer Certification', issuer: 'Meta', date: '2021' }
-  ];
+  // const certifications = [
+  //   { name: 'AWS Certified Solutions Architect', issuer: 'Amazon Web Services', date: '2023' },
+  //   { name: 'Google Cloud Professional Developer', issuer: 'Google Cloud', date: '2022' },
+  //   { name: 'Certified Kubernetes Administrator', issuer: 'Cloud Native Computing Foundation', date: '2022' },
+  //   { name: 'React Developer Certification', issuer: 'Meta', date: '2021' }
+  // ];
 
   return (
     <Box id="education" sx={{ py: 8, background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%)', position: 'relative' }}>
@@ -43,7 +43,7 @@ const Education = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Typography variant="h2" sx={{ fontWeight: 700, mb: 2, background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Education & Certifications
+              Education
             </Typography>
             <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: '600px', margin: '0 auto' }}>
               My academic journey and professional certifications that have shaped my expertise
@@ -110,7 +110,7 @@ const Education = () => {
           </Box>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} viewport={{ once: true }}>
+        {/* <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} viewport={{ once: true }}>
           <Box>
             <Typography variant="h4" sx={{ fontWeight: 600, mb: 4, color: 'text.primary', textAlign: 'center' }}>Professional Certifications</Typography>
             <Grid container spacing={3}>
@@ -130,7 +130,7 @@ const Education = () => {
               ))}
             </Grid>
           </Box>
-        </motion.div>
+        </motion.div> */}
       </Container>
     </Box>
   );

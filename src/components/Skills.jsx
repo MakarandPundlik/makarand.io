@@ -13,12 +13,10 @@ const Skills = () => {
       icon: <Code />,
       color: '#00D4FF',
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Vue.js', level: 80 },
-        { name: 'HTML5/CSS3', level: 95 },
-        { name: 'Sass/SCSS', level: 85 },
+        { name: 'Angular', level: 85 },
+        { name: 'JavaScript', level: 95 },
+        { name: 'TypeScript', level: 95 },
+        { name: 'React', level: 90 },
       ]
     },
     {
@@ -26,12 +24,10 @@ const Skills = () => {
       icon: <Storage />,
       color: '#FF6B6B',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'Express.js', level: 88 },
+        { name: 'Node.js', level: 99 },
+        { name: 'Python', level: 80 },
         { name: 'REST APIs', level: 92 },
-        { name: 'GraphQL', level: 75 },
-        { name: 'Microservices', level: 80 },
+        { name: 'Microservices', level: 99 },
       ]
     },
     {
@@ -39,12 +35,12 @@ const Skills = () => {
       icon: <Storage />,
       color: '#4CAF50',
       skills: [
-        { name: 'MongoDB', level: 88 },
-        { name: 'PostgreSQL', level: 85 },
+        { name: 'MongoDB', level: 90 },
+        { name: 'DynamoDB', level: 95 },
         { name: 'Redis', level: 80 },
         { name: 'MySQL', level: 82 },
-        { name: 'Firebase', level: 75 },
-        { name: 'Elasticsearch', level: 70 },
+        // { name: 'Firebase', level: 75 },
+        { name: 'Elasticsearch', level: 95 },
       ]
     },
     {
@@ -52,38 +48,12 @@ const Skills = () => {
       icon: <CloudQueue />,
       color: '#FF9800',
       skills: [
-        { name: 'AWS', level: 85 },
-        { name: 'Docker', level: 88 },
-        { name: 'Kubernetes', level: 75 },
-        { name: 'CI/CD', level: 82 },
+        { name: 'AWS', level: 99 },
+        { name: 'Docker', level: 85 },
+        { name: 'Kubernetes', level: 70 },
+        { name: 'CI/CD', level: 95 },
         { name: 'Terraform', level: 70 },
-        { name: 'Monitoring', level: 78 },
-      ]
-    },
-    {
-      title: 'Mobile Development',
-      icon: <PhoneAndroid />,
-      color: '#9C27B0',
-      skills: [
-        { name: 'React Native', level: 80 },
-        { name: 'Flutter', level: 70 },
-        { name: 'iOS Development', level: 65 },
-        { name: 'Android Development', level: 68 },
-        { name: 'PWA', level: 85 },
-        { name: 'Mobile UI/UX', level: 82 },
-      ]
-    },
-    {
-      title: 'Design & Tools',
-      icon: <Palette />,
-      color: '#E91E63',
-      skills: [
-        { name: 'Figma', level: 90 },
-        { name: 'Adobe Creative Suite', level: 85 },
-        { name: 'Sketch', level: 80 },
-        { name: 'Git', level: 92 },
-        { name: 'Webpack', level: 78 },
-        { name: 'Testing (Jest)', level: 85 },
+        { name: 'Monitoring', level: 90 },
       ]
     }
   ];

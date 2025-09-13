@@ -12,70 +12,70 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with advanced features including real-time inventory management, payment processing, and admin dashboard.',
-      image: '/placeholder-project1.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
+      title: 'Campus Crush',
+      description: 'A dating application for NC State University Students where they are matched according to their interests using matching algorithm',
+      image: '/crush.png',
+      technologies: ['AWS', 'Serverless', 'React Native'],
+      // liveUrl: '',
+      githubUrl: 'https://github.com/CampusCrush1-0',
       featured: true,
       category: 'Full Stack'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.',
-      image: '/placeholder-project2.jpg',
-      technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io', 'JWT'],
+      title: 'The Art Of Success',
+      description: 'A webapp for students suffereing with ADHD and Dyslexia. App pairs students with tutors based on their experies and dilects',
+      image: '/artofsuccess.jpg',
+      technologies: ['Node', 'Express', 'Javascript','Socket.io', 'Reactjs', 'MaterialUI', 'Vercel', 'Heroku'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
+      githubUrl: 'https://github.com/Art-of-Success',
       featured: true,
       category: 'Web App'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: '/placeholder-project3.jpg',
-      technologies: ['React', 'TypeScript', 'Chart.js', 'OpenWeather API'],
+      title: 'Pack Travel',
+      description: 'Most of the university students do not have a car to travel off-campus and rely mostly on the Wolfline. But what if someone wants to travel outside Wolflines limit? Well... why not collaborate on PackTravel to travel off-campus by a cab, rental car, etc.',
+      image: '/wolf2.svg',
+      technologies: ['Python', 'Django', 'MongoDb', 'Javascript', 'HTML', 'CSS'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
-      featured: false,
-      category: 'Frontend'
-    },
-    {
-      id: 4,
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics platform for social media metrics with data visualization and reporting features.',
-      image: '/placeholder-project4.jpg',
-      technologies: ['Next.js', 'Python', 'D3.js', 'Redis', 'AWS'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
+      githubUrl: 'https://github.com/GradHackersGuild/PackTravel-Old',
       featured: true,
-      category: 'Analytics'
+      category: 'WebApp'
     },
-    {
-      id: 5,
-      title: 'Mobile Banking App',
-      description: 'A secure mobile banking application with biometric authentication, transaction management, and financial planning tools.',
-      image: '/placeholder-project5.jpg',
-      technologies: ['React Native', 'Node.js', 'PostgreSQL', 'JWT', 'Stripe'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
-      featured: false,
-      category: 'Mobile'
-    },
-    {
-      id: 6,
-      title: 'AI Chatbot Platform',
-      description: 'An intelligent chatbot platform with natural language processing, multi-language support, and integration capabilities.',
-      image: '/placeholder-project6.jpg',
-      technologies: ['Python', 'TensorFlow', 'FastAPI', 'React', 'Docker'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example',
-      featured: false,
-      category: 'AI/ML'
-    }
+    // {
+    //   id: 4,
+    //   title: 'Social Media Analytics',
+    //   description: 'A comprehensive analytics platform for social media metrics with data visualization and reporting features.',
+    //   image: '/placeholder-project4.jpg',
+    //   technologies: ['Next.js', 'Python', 'D3.js', 'Redis', 'AWS'],
+    //   liveUrl: 'https://example.com',
+    //   githubUrl: 'https://github.com/example',
+    //   featured: true,
+    //   category: 'Analytics'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Mobile Banking App',
+    //   description: 'A secure mobile banking application with biometric authentication, transaction management, and financial planning tools.',
+    //   image: '/placeholder-project5.jpg',
+    //   technologies: ['React Native', 'Node.js', 'PostgreSQL', 'JWT', 'Stripe'],
+    //   liveUrl: 'https://example.com',
+    //   githubUrl: 'https://github.com/example',
+    //   featured: false,
+    //   category: 'Mobile'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'AI Chatbot Platform',
+    //   description: 'An intelligent chatbot platform with natural language processing, multi-language support, and integration capabilities.',
+    //   image: '/placeholder-project6.jpg',
+    //   technologies: ['Python', 'TensorFlow', 'FastAPI', 'React', 'Docker'],
+    //   liveUrl: 'https://example.com',
+    //   githubUrl: 'https://github.com/example',
+    //   featured: false,
+    //   category: 'AI/ML'
+    // }
   ];
 
   const containerVariants = {
@@ -205,7 +205,7 @@ const Projects = () => {
                           gap: 2,
                         }}
                       >
-                        <IconButton
+                        {/* <IconButton
                           sx={{
                             color: 'white',
                             background: 'rgba(255, 255, 255, 0.2)',
@@ -216,7 +216,7 @@ const Projects = () => {
                           onClick={() => window.open(project.liveUrl, '_blank')}
                         >
                           <Launch />
-                        </IconButton>
+                        </IconButton> */}
                         <IconButton
                           sx={{
                             color: 'white',
@@ -317,7 +317,7 @@ const Projects = () => {
                       </Box>
 
                       <Box sx={{ display: 'flex', gap: 1, justifyContent: 'flex-end' }}>
-                        <IconButton
+                        {/* <IconButton
                           size="small"
                           onClick={() => window.open(project.liveUrl, '_blank')}
                           sx={{
@@ -328,7 +328,7 @@ const Projects = () => {
                           }}
                         >
                           <Launch fontSize="small" />
-                        </IconButton>
+                        </IconButton> */}
                         <IconButton
                           size="small"
                           onClick={() => window.open(project.githubUrl, '_blank')}

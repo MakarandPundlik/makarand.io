@@ -39,16 +39,9 @@ const Contact = () => {
     {
       icon: <Email />,
       title: 'Email',
-      value: 'makarand@example.com',
-      link: 'mailto:makarand@example.com',
+      value: 'makarandpundlik@gmail.com',
+      link: 'mailto:makarandpundlik@gmail.com',
       color: '#00D4FF'
-    },
-    {
-      icon: <Phone />,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-      color: '#FF6B6B'
     },
     {
       icon: <LocationOn />,
@@ -63,20 +56,14 @@ const Contact = () => {
     {
       icon: <LinkedInIcon />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/makarand',
+      url: 'https://www.linkedin.com/in/makarand-pundlik/',
       color: '#0077B5'
     },
     {
       icon: <GitHubIcon />,
       name: 'GitHub',
-      url: 'https://github.com/makarand',
+      url: 'https://github.com/MakarandPundlik',
       color: '#333'
-    },
-    {
-      icon: <TwitterIcon />,
-      name: 'Twitter',
-      url: 'https://twitter.com/makarand',
-      color: '#1DA1F2'
     }
   ];
 
@@ -472,7 +459,7 @@ const Contact = () => {
                 mb: 2,
               }}
             >
-              © 2024 Makarand Pundlik. All rights reserved.
+              © 2025 Makarand Pundlik. No rights rights reserved.
             </Typography>
             <Typography
               variant="body2"
@@ -481,7 +468,7 @@ const Contact = () => {
                 fontSize: '0.875rem',
               }}
             >
-              Built with React, Material-UI, and Framer Motion
+              Built with Passion and Cursor
             </Typography>
           </Box>
         </motion.div>
