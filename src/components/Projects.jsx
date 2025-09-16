@@ -14,7 +14,7 @@ const Projects = () => {
       id: 1,
       title: 'Campus Crush',
       description: 'A dating application for NC State University Students where they are matched according to their interests using matching algorithm',
-      image: '/crush.png',
+      image: `${process.env.PUBLIC_URL}/crush.png`,
       technologies: ['AWS', 'Serverless', 'React Native'],
       // liveUrl: '',
       githubUrl: 'https://github.com/CampusCrush1-0',
@@ -25,7 +25,7 @@ const Projects = () => {
       id: 2,
       title: 'The Art Of Success',
       description: 'A webapp for students suffereing with ADHD and Dyslexia. App pairs students with tutors based on their experies and dilects',
-      image: '/artofsuccess.jpg',
+      image: `${process.env.PUBLIC_URL}/artofsuccess.jpg`,
       technologies: ['Node', 'Express', 'Javascript','Socket.io', 'Reactjs', 'MaterialUI', 'Vercel', 'Heroku'],
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/Art-of-Success',
@@ -36,7 +36,7 @@ const Projects = () => {
       id: 3,
       title: 'Pack Travel',
       description: 'Most of the university students do not have a car to travel off-campus and rely mostly on the Wolfline. But what if someone wants to travel outside Wolflines limit? Well... why not collaborate on PackTravel to travel off-campus by a cab, rental car, etc.',
-      image: '/wolf2.svg',
+      image: `${process.env.PUBLIC_URL}/wolf2.svg`,
       technologies: ['Python', 'Django', 'MongoDb', 'Javascript', 'HTML', 'CSS'],
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/GradHackersGuild/PackTravel-Old',
@@ -122,7 +122,7 @@ const Projects = () => {
               sx={{
                 fontWeight: 700,
                 mb: 2,
-                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -159,191 +159,185 @@ const Projects = () => {
                 >
                   <Card
                     sx={{
-                      height: '100%',
+                      height: 400,
                       background: 'rgba(255, 255, 255, 0.03)',
                       backdropFilter: 'blur(10px)',
                       border: '1px solid rgba(0, 212, 255, 0.1)',
                       borderRadius: 3,
                       overflow: 'hidden',
-                      transition: 'all 0.3s ease',
+                      transition: 'transform 1000ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 1000ms ease, border-color 1000ms ease',
+                      perspective: 1000,
                       position: 'relative',
+                      cursor: 'pointer',
                       '&:hover': {
                         borderColor: 'rgba(0, 212, 255, 0.3)',
                         boxShadow: '0 20px 40px rgba(0, 212, 255, 0.1)',
                       },
+                      '&:hover .flipInner': {
+                        transform: 'rotateY(180deg)'
+                      }
                     }}
                     onMouseEnter={() => setHoveredProject(project.id)}
                     onMouseLeave={() => setHoveredProject(null)}
+                    onClick={() => window.open(project.githubUrl, '_blank')}
                   >
-                    {/* Project Image */}
-                    <Box sx={{ position: 'relative', height: 200, overflow: 'hidden' }}>
-                      <CardMedia
-                        component="img"
-                        height="200"
-                        image={project.image}
-                        alt={project.title}
-                        sx={{
-                          transition: 'transform 0.3s ease',
-                          transform: hoveredProject === project.id ? 'scale(1.1)' : 'scale(1)',
-                        }}
-                      />
-                      
-                      {/* Overlay */}
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          background: 'linear-gradient(135deg, rgba(0, 212, 255, 0.8) 0%, rgba(255, 107, 107, 0.8) 100%)',
-                          opacity: hoveredProject === project.id ? 1 : 0,
-                          transition: 'opacity 0.3s ease',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: 2,
-                        }}
-                      >
-                        {/* <IconButton
-                          sx={{
-                            color: 'white',
-                            background: 'rgba(255, 255, 255, 0.2)',
-                            '&:hover': {
-                              background: 'rgba(255, 255, 255, 0.3)',
-                            },
-                          }}
-                          onClick={() => window.open(project.liveUrl, '_blank')}
-                        >
-                          <Launch />
-                        </IconButton> */}
-                        <IconButton
-                          sx={{
-                            color: 'white',
-                            background: 'rgba(255, 255, 255, 0.2)',
-                            '&:hover': {
-                              background: 'rgba(255, 255, 255, 0.3)',
-                            },
-                          }}
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                        >
-                          <GitHubIcon />
-                        </IconButton>
-                      </Box>
-
-                      {/* Featured Badge */}
-                      {project.featured && (
-                        <Chip
-                          label="Featured"
-                          sx={{
-                            position: 'absolute',
-                            top: 16,
-                            right: 16,
-                            background: 'linear-gradient(135deg, #00D4FF 0%, #4FC3F7 100%)',
-                            color: '#0A0A0A',
-                            fontWeight: 600,
-                          }}
-                        />
-                      )}
-
-                      {/* Category Badge */}
-                      <Chip
-                        label={project.category}
-                        size="small"
-                        sx={{
-                          position: 'absolute',
-                          top: 16,
-                          left: 16,
-                          background: 'rgba(0, 0, 0, 0.7)',
-                          color: 'white',
-                          fontWeight: 500,
-                        }}
-                      />
-                    </Box>
-
-                    <CardContent sx={{ p: 3 }}>
-                      <Typography
-                        variant="h5"
-                        sx={{
-                          fontWeight: 600,
-                          mb: 2,
-                          color: 'text.primary',
-                        }}
-                      >
-                        {project.title}
-                      </Typography>
-
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: 'text.secondary',
-                          mb: 3,
-                          lineHeight: 1.6,
-                          display: '-webkit-box',
-                          WebkitLineClamp: 3,
-                          WebkitBoxOrient: 'vertical',
-                          overflow: 'hidden',
-                        }}
-                      >
-                        {project.description}
-                      </Typography>
-
-                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
-                        {project.technologies.slice(0, 4).map((tech, idx) => (
-                          <Chip
-                            key={idx}
-                            label={tech}
-                            size="small"
+                    <Box className="flipInner" sx={{ position: 'relative', transformStyle: 'preserve-3d', transition: 'transform 1000ms cubic-bezier(0.2, 0.8, 0.2, 1)', willChange: 'transform', height: '100%' }}>
+                      {/* Front */}
+                      <Box className="flipFront" sx={{ position: 'relative', height: '100%', backfaceVisibility: 'hidden' }}>
+                        {/* Project Image */}
+                        <Box sx={{ position: 'relative', height: 240, overflow: 'hidden' }}>
+                          <CardMedia
+                            component="img"
+                            height={240}
+                            image={project.image}
+                            alt={project.title}
                             sx={{
-                              background: 'rgba(0, 212, 255, 0.1)',
-                              color: 'primary.main',
-                              border: '1px solid rgba(0, 212, 255, 0.3)',
-                              fontSize: '0.75rem',
+                              transition: 'transform 0.3s ease',
+                              transform: hoveredProject === project.id ? 'scale(1.1)' : 'scale(1)',
+                              objectFit: 'cover',
                             }}
                           />
-                        ))}
-                        {project.technologies.length > 4 && (
+                          
+                          {/* Overlay */}
+                          <Box
+                            sx={{
+                              position: 'absolute',
+                              top: 0,
+                              left: 0,
+                              right: 0,
+                              bottom: 0,
+                              background: 'linear-gradient(135deg, rgba(0, 212, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)',
+                              opacity: hoveredProject === project.id ? 1 : 0,
+                              transition: 'opacity 0.3s ease',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              gap: 2,
+                            }}
+                          >
+                            <IconButton
+                              sx={{
+                                color: 'white',
+                                background: 'rgba(255, 255, 255, 0.2)',
+                                '&:hover': {
+                                  background: 'rgba(255, 255, 255, 0.3)',
+                                },
+                              }}
+                              onClick={() => window.open(project.githubUrl, '_blank')}
+                            >
+                              <GitHubIcon />
+                            </IconButton>
+                          </Box>
+
+                          {/* Featured Badge */}
+                          {project.featured && (
+                            <Chip
+                              label="Featured"
+                              sx={{
+                                position: 'absolute',
+                                top: 16,
+                                right: 16,
+                                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
+                                color: '#0A0A0A',
+                                fontWeight: 600,
+                              }}
+                            />
+                          )}
+
+                          {/* Category Badge */}
                           <Chip
-                            label={`+${project.technologies.length - 4}`}
+                            label={project.category}
                             size="small"
                             sx={{
-                              background: 'rgba(255, 107, 107, 0.1)',
-                              color: 'secondary.main',
-                              border: '1px solid rgba(255, 107, 107, 0.3)',
-                              fontSize: '0.75rem',
+                              position: 'absolute',
+                              top: 16,
+                              left: 16,
+                              background: 'rgba(0, 0, 0, 0.7)',
+                              color: 'white',
+                              fontWeight: 500,
                             }}
                           />
-                        )}
+                        </Box>
+
+                        <CardContent sx={{ p: 3, height: 160, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                          <Typography
+                            variant="h5"
+                            sx={{
+                              fontWeight: 600,
+                              mb: 2,
+                              color: 'text.primary',
+                            }}
+                          >
+                            {project.title}
+                          </Typography>
+
+                          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
+                            {project.technologies.slice(0, 4).map((tech, idx) => (
+                              <Chip
+                                key={idx}
+                                label={tech}
+                                size="small"
+                                sx={{
+                                  background: 'rgba(0, 212, 255, 0.1)',
+                                  color: 'primary.main',
+                                  border: '1px solid rgba(0, 212, 255, 0.3)',
+                                  fontSize: '0.75rem',
+                                }}
+                              />
+                            ))}
+                            {project.technologies.length > 4 && (
+                              <Chip
+                                label={`+${project.technologies.length - 4}`}
+                                size="small"
+                                sx={{
+                                  background: 'rgba(0, 212, 255, 0.1)',
+                                  color: 'primary.main',
+                                  border: '1px solid rgba(0, 212, 255, 0.3)',
+                                  fontSize: '0.75rem',
+                                }}
+                              />
+                            )}
+                          </Box>
+                        </CardContent>
                       </Box>
 
-                      <Box sx={{ display: 'flex', gap: 1, justifyContent: 'flex-end' }}>
-                        {/* <IconButton
-                          size="small"
-                          onClick={() => window.open(project.liveUrl, '_blank')}
+                      {/* Back */}
+                      <Box className="flipBack" sx={{
+                        position: 'absolute',
+                        inset: 0,
+                        p: 3,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        backfaceVisibility: 'hidden',
+                        transform: 'rotateY(180deg)',
+                        background: '#000',
+                        borderRadius: 3,
+                        borderTopLeftRadius: 0,
+                        borderTopRightRadius: 0,
+                      }}>
+                        <Typography
+                          variant="h6"
                           sx={{
+                            fontWeight: 700,
+                            mb: 2,
                             color: 'primary.main',
-                            '&:hover': {
-                              background: 'rgba(0, 212, 255, 0.1)',
-                            },
                           }}
                         >
-                          <Launch fontSize="small" />
-                        </IconButton> */}
-                        <IconButton
-                          size="small"
-                          onClick={() => window.open(project.githubUrl, '_blank')}
+                          {project.title}
+                        </Typography>
+                        <Typography
+                          variant="body2"
                           sx={{
-                            color: 'text.secondary',
-                            '&:hover': {
-                              background: 'rgba(255, 107, 107, 0.1)',
-                              color: 'secondary.main',
-                            },
+                            color: 'text.primary',
+                            lineHeight: 1.6,
+                            fontSize: '0.9rem',
                           }}
                         >
-                          <GitHubIcon fontSize="small" />
-                        </IconButton>
+                          {project.description}
+                        </Typography>
                       </Box>
-                    </CardContent>
+                    </Box>
                   </Card>
                 </motion.div>
               </Grid>
@@ -352,13 +346,13 @@ const Projects = () => {
         </motion.div>
 
         {/* View More Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          style={{ textAlign: 'center', marginTop: 4 }}
-        >
+        <Box sx={{ mt: 8, textAlign: 'center' }}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -384,7 +378,8 @@ const Projects = () => {
           >
             View All Projects
           </motion.button>
-        </motion.div>
+          </motion.div>
+        </Box>
       </Container>
     </Box>
   );

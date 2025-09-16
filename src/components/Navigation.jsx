@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, Box, IconButton, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton, Drawer, List, ListItem, ListItemText, Button, useMediaQuery, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,8 +26,6 @@ const Navigation = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   const handleDrawerToggle = () => {
@@ -65,7 +64,7 @@ const Navigation = () => {
               sx={{
                 fontWeight: 700,
                 fontSize: '1.5rem',
-                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -88,7 +87,7 @@ const Navigation = () => {
               <MenuIcon />
             </IconButton>
           ) : (
-            <Box sx={{ display: 'flex', gap: 4 }}>
+            <Box sx={{ display: 'flex', gap: 4, alignItems: 'center' }}>
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -114,6 +113,34 @@ const Navigation = () => {
                   </Typography>
                 </motion.div>
               ))}
+              
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <Button
+                  variant="outlined"
+                  startIcon={<DescriptionIcon />}
+                  onClick={() => window.open('https://drive.google.com/file/d/1I6GJxJNnEatMdRgRDwzZQMjr1oDHgMk4/view?usp=sharing', '_blank')}
+                  sx={{
+                    color: 'primary.main',
+                    borderColor: 'primary.main',
+                    fontWeight: 500,
+                    textTransform: 'none',
+                    px: 2,
+                    py: 0.5,
+                    '&:hover': {
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                      transform: 'translateY(-2px)',
+                    },
+                    transition: 'all 0.3s ease',
+                  }}
+                >
+                  Resume
+                </Button>
+              </motion.div>
             </Box>
           )}
         </Toolbar>
@@ -166,6 +193,26 @@ const Navigation = () => {
               />
             </ListItem>
           ))}
+          
+          <ListItem
+            onClick={() => window.open('/resume.pdf', '_blank')}
+            sx={{
+              cursor: 'pointer',
+              '&:hover': {
+                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="Resume"
+              sx={{
+                '& .MuiListItemText-primary': {
+                  color: 'primary.main',
+                  fontWeight: 500,
+                },
+              }}
+            />
+          </ListItem>
         </List>
       </Drawer>
     </>

@@ -24,7 +24,7 @@ const Landing = () => {
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%)',
+        background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 30%, #2A2A2A 60%, #1A1A1A 100%)',
       }}
     >
       {/* Background Animation */}
@@ -36,8 +36,9 @@ const Landing = () => {
           right: 0,
           bottom: 0,
           background: `
-            radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 10% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 90% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
             radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.05) 0%, transparent 50%)
           `,
           animation: 'float 6s ease-in-out infinite',
@@ -57,7 +58,7 @@ const Landing = () => {
                 sx={{
                   color: 'primary.main',
                   fontWeight: 500,
-                  mb: 2,
+                  mb: 0.5,
                   fontSize: { xs: '1rem', md: '1.2rem' },
                 }}
               >
@@ -69,7 +70,7 @@ const Landing = () => {
                 sx={{
                   fontWeight: 800,
                   mb: 2,
-                  background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                  background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -115,68 +116,6 @@ const Landing = () => {
                 I write code that solves real world problems.
               </Typography>
 
-              <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    variant="contained"
-                    size="large"
-                    onClick={() => scrollToNext()}
-                    sx={{
-                      background: 'linear-gradient(135deg, #00D4FF 0%, #4FC3F7 100%)',
-                      color: '#0A0A0A',
-                      fontWeight: 600,
-                      px: 4,
-                      py: 1.5,
-                      borderRadius: 2,
-                      textTransform: 'none',
-                      fontSize: '1.1rem',
-                      '&:hover': {
-                        background: 'linear-gradient(135deg, #4FC3F7 0%, #00D4FF 100%)',
-                        transform: 'translateY(-2px)',
-                        boxShadow: '0 10px 20px rgba(0, 212, 255, 0.3)',
-                      },
-                    }}
-                  >
-                    View My Work
-                  </Button>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    variant="outlined"
-                    size="large"
-                    onClick={() => {
-                      const element = document.querySelector('#contact');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    sx={{
-                      borderColor: 'primary.main',
-                      color: 'primary.main',
-                      fontWeight: 600,
-                      px: 4,
-                      py: 1.5,
-                      borderRadius: 2,
-                      textTransform: 'none',
-                      fontSize: '1.1rem',
-                      '&:hover': {
-                        borderColor: 'primary.light',
-                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
-                        transform: 'translateY(-2px)',
-                      },
-                    }}
-                  >
-                    Get In Touch
-                  </Button>
-                </motion.div>
-              </Box>
             </motion.div>
           </Grid>
 
@@ -196,11 +135,11 @@ const Landing = () => {
               >
                 {/* Profile Image Placeholder */}
                 <Avatar
-                  src="/me2.jpeg"
+                  src={`${process.env.PUBLIC_URL}/me2.jpeg`}
                   sx={{
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                    background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                     fontSize: '4rem',
                     fontWeight: 700,
                   }}
@@ -234,7 +173,7 @@ const Landing = () => {
                     border: '1px solid rgba(0, 212, 255, 0.3)',
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: 'primary.main', fontWeight: 700 }}>
+                  <Typography variant="h6" sx={{ color: 'primary.main', fontWeight: 700, fontSize: '2rem' }}>
                     💻
                   </Typography>
                 </motion.div>
@@ -256,16 +195,16 @@ const Landing = () => {
                     left: '10%',
                     width: 50,
                     height: 50,
-                    background: 'rgba(255, 107, 107, 0.2)',
+                    background: 'rgba(255, 255, 255, 0.2)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 107, 107, 0.3)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: 'secondary.main', fontWeight: 700 }}>
+                  <Typography variant="h6" sx={{ color: 'primary.main', fontWeight: 700, fontSize: '1.8rem' }}>
                     ⚡
                   </Typography>
                 </motion.div>

@@ -14,7 +14,7 @@ const Experience = () => {
       location: 'New York, USA',
       duration: 'May 2025 - June 2025',
       type: 'Internship',
-      description: 'Founding Software Engineer. Developed multiple microservices from scratch alongwith heading the backend architecture.',
+      description: 'Founding Software Engineer headed the backend architecture.',
       technologies: ['Node.js', 'AWS', 'TypeScript', 'Zoom Api', 'Slack Api', 'CRMs Api'],
       achievements: [
         'Designed and optimized cloud-native LLM-driven services, reducing GPT API calls by 50% to improve scalability and cost.',
@@ -28,7 +28,7 @@ const Experience = () => {
       location: 'Raleigh, NC',
       duration: 'Jan 2025 - Apr 2025',
       type: 'Internship',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create responsive user interfaces.',
+      description: 'Frontend Developer - Worked on WebAplus learning platform.',
       technologies: ['Angular', 'Typescript', 'Linux'],
       achievements: [
         'Redesigned WebAplus learning platform UI with Angular (TypeScript), improving interactivity, accessibility, and student engagement.e',
@@ -111,7 +111,7 @@ const Experience = () => {
               sx={{
                 fontWeight: 700,
                 mb: 2,
-                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -147,7 +147,7 @@ const Experience = () => {
                 top: 0,
                 bottom: 0,
                 width: 2,
-                background: 'linear-gradient(180deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(180deg, #00D4FF 0%, #FFFFFF 100%)',
                 borderRadius: 1,
               }}
             />
@@ -160,104 +160,160 @@ const Experience = () => {
               >
                 <Card
                   sx={{
-                    ml: { xs: 6, md: 8 },
+                    mx: 'auto',
                     mb: 4,
+                    maxWidth: { xs: '92%', md: 560 },
                     background: 'rgba(255, 255, 255, 0.03)',
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(0, 212, 255, 0.1)',
                     borderRadius: 3,
-                    transition: 'all 0.3s ease',
+                    overflow: 'hidden',
+                    transition: 'transform 1000ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 1000ms ease, border-color 1000ms ease, z-index 1000ms ease',
+                    perspective: 1000,
+                    position: 'relative',
+                    zIndex: 1,
                     '&:hover': {
-                      transform: 'translateY(-5px)',
+                      transform: 'translateY(-8px) scale(1.02)',
                       borderColor: 'rgba(0, 212, 255, 0.3)',
-                      boxShadow: '0 20px 40px rgba(0, 212, 255, 0.1)',
+                      boxShadow: '0 24px 48px rgba(0, 212, 255, 0.12)',
+                      zIndex: 10,
                     },
+                    '&:hover .flipInner': {
+                      transform: 'rotateY(180deg)'
+                    }
                   }}
                 >
-                  <CardContent sx={{ p: 4 }}>
-                    <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, mb: 3 }}>
-                      <Box
-                        sx={{
-                          width: 60,
-                          height: 60,
-                          borderRadius: '50%',
-                          background: 'linear-gradient(135deg, #00D4FF 0%, #4FC3F7 100%)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <Work sx={{ color: '#0A0A0A', fontSize: '1.5rem' }} />
-                      </Box>
-                      
-                      <Box sx={{ flex: 1 }}>
-                        <Typography
-                          variant="h5"
+                  <Box className="flipInner" sx={{ position: 'relative', transformStyle: 'preserve-3d', transition: 'transform 1000ms cubic-bezier(0.2, 0.8, 0.2, 1)', willChange: 'transform' }}>
+                    {/* Front */}
+                    <Box className="flipFront" sx={{ position: 'relative', p: 4, backfaceVisibility: 'hidden' }}>
+                      <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, mb: 3 }}>
+                        <Box
                           sx={{
-                            fontWeight: 600,
-                            mb: 1,
-                            color: 'text.primary',
+                            width: 60,
+                            height: 60,
+                            borderRadius: '50%',
+                            background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexShrink: 0,
                           }}
                         >
-                          {exp.title}
-                        </Typography>
+                          <Work sx={{ color: '#0A0A0A', fontSize: '1.5rem' }} />
+                        </Box>
                         
+                        <Box sx={{ flex: 1 }}>
+                          <Typography
+                            variant="h5"
+                            sx={{
+                              fontWeight: 600,
+                              mb: 1,
+                              color: 'text.primary',
+                            }}
+                          >
+                            {exp.title}
+                          </Typography>
+                          
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              color: 'primary.main',
+                              fontWeight: 500,
+                              mb: 1,
+                            }}
+                          >
+                            {exp.company}
+                          </Typography>
+
+                          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 2 }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                              <LocationOn sx={{ fontSize: '1rem', color: 'text.secondary' }} />
+                              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                                {exp.location}
+                              </Typography>
+                            </Box>
+                            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                              {exp.duration}
+                            </Typography>
+                            <Chip
+                              label={exp.type}
+                              size="small"
+                              sx={{
+                                background: 'rgba(0, 212, 255, 0.1)',
+                                color: 'primary.main',
+                                border: '1px solid rgba(0, 212, 255, 0.3)',
+                              }}
+                            />
+                          </Box>
+                        </Box>
+                      </Box>
+
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: 'text.secondary',
+                          mb: 2,
+                          lineHeight: 1.7,
+                        }}
+                      >
+                        {exp.description}
+                      </Typography>
+
+                      {/* Technologies (restored) */}
+                      <Box>
                         <Typography
                           variant="h6"
                           sx={{
-                            color: 'primary.main',
-                            fontWeight: 500,
-                            mb: 1,
+                            fontWeight: 600,
+                            mb: 1.5,
+                            color: 'text.primary',
                           }}
                         >
-                          {exp.company}
+                          Technologies:
                         </Typography>
-
-                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 2 }}>
-                          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                            <LocationOn sx={{ fontSize: '1rem', color: 'text.secondary' }} />
-                            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                              {exp.location}
-                            </Typography>
-                          </Box>
-                          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                            {exp.duration}
-                          </Typography>
-                          <Chip
-                            label={exp.type}
-                            size="small"
-                            sx={{
-                              background: 'rgba(0, 212, 255, 0.1)',
-                              color: 'primary.main',
-                              border: '1px solid rgba(0, 212, 255, 0.3)',
-                            }}
-                          />
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                          {exp.technologies.map((tech, idx) => (
+                            <Chip
+                              key={idx}
+                              label={tech}
+                              sx={{
+                                background: 'rgba(0, 212, 255, 0.1)',
+                                color: 'primary.main',
+                                border: '1px solid rgba(0, 212, 255, 0.3)',
+                                '&:hover': {
+                                  background: 'rgba(0, 212, 255, 0.2)',
+                                },
+                              }}
+                            />
+                          ))}
                         </Box>
                       </Box>
                     </Box>
 
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: 'text.secondary',
-                        mb: 3,
-                        lineHeight: 1.7,
-                      }}
-                    >
-                      {exp.description}
-                    </Typography>
-
-                    <Box sx={{ mb: 3 }}>
+                    {/* Back */}
+                    <Box className="flipBack" sx={{
+                      position: 'absolute',
+                      inset: 0,
+                      p: 4,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      backfaceVisibility: 'hidden',
+                      transform: 'rotateY(180deg)',
+                      background: '#000',
+                      borderRadius: 3,
+                      borderTopLeftRadius: 0,
+                      borderTopRightRadius: 0,
+                    }}>
                       <Typography
                         variant="h6"
                         sx={{
-                          fontWeight: 600,
+                          fontWeight: 700,
                           mb: 2,
-                          color: 'text.primary',
+                          color: 'primary.main',
                         }}
                       >
-                        Key Achievements:
+                        Key Achievements
                       </Typography>
                       <Box component="ul" sx={{ pl: 2, m: 0 }}>
                         {exp.achievements.map((achievement, idx) => (
@@ -266,7 +322,7 @@ const Experience = () => {
                             component="li"
                             variant="body2"
                             sx={{
-                              color: 'text.secondary',
+                              color: 'text.primary',
                               mb: 1,
                               lineHeight: 1.6,
                             }}
@@ -276,36 +332,7 @@ const Experience = () => {
                         ))}
                       </Box>
                     </Box>
-
-                    <Box>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontWeight: 600,
-                          mb: 2,
-                          color: 'text.primary',
-                        }}
-                      >
-                        Technologies:
-                      </Typography>
-                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                        {exp.technologies.map((tech, idx) => (
-                          <Chip
-                            key={idx}
-                            label={tech}
-                            sx={{
-                              background: 'rgba(255, 107, 107, 0.1)',
-                              color: 'secondary.main',
-                              border: '1px solid rgba(255, 107, 107, 0.3)',
-                              '&:hover': {
-                                background: 'rgba(255, 107, 107, 0.2)',
-                              },
-                            }}
-                          />
-                        ))}
-                      </Box>
-                    </Box>
-                  </CardContent>
+                  </Box>
                 </Card>
 
                 {/* Timeline Dot */}
@@ -317,7 +344,7 @@ const Experience = () => {
                     width: 16,
                     height: 16,
                     borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                    background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                     border: '3px solid #0A0A0A',
                     zIndex: 1,
                   }}

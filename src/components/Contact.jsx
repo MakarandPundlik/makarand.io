@@ -89,7 +89,7 @@ const Contact = () => {
               sx={{
                 fontWeight: 700,
                 mb: 2,
-                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -410,7 +410,7 @@ const Contact = () => {
                             size="large"
                             startIcon={<Send />}
                             sx={{
-                              background: 'linear-gradient(135deg, #00D4FF 0%, #4FC3F7 100%)',
+                              background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                               color: '#0A0A0A',
                               fontWeight: 600,
                               px: 4,

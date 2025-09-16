@@ -22,7 +22,7 @@ const Skills = () => {
     {
       title: 'Backend Development',
       icon: <Storage />,
-      color: '#FF6B6B',
+      color: '#4FC3F7',
       skills: [
         { name: 'Node.js', level: 99 },
         { name: 'Python', level: 80 },
@@ -52,7 +52,7 @@ const Skills = () => {
         { name: 'Docker', level: 85 },
         { name: 'Kubernetes', level: 70 },
         { name: 'CI/CD', level: 95 },
-        { name: 'Terraform', level: 70 },
+        // { name: 'Terraform', level: 70 },
         { name: 'Monitoring', level: 90 },
       ]
     }
@@ -102,7 +102,7 @@ const Skills = () => {
               sx={{
                 fontWeight: 700,
                 mb: 2,
-                background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)',
+                background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -129,9 +129,9 @@ const Skills = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Grid container spacing={4}>
+          <Grid container spacing={4} justifyContent="center" sx={{ maxWidth: 800, mx: 'auto' }}>
             {skillCategories.map((category, categoryIndex) => (
-              <Grid item xs={12} md={6} lg={4} key={categoryIndex}>
+              <Grid item xs={12} md={6} key={categoryIndex}>
                 <motion.div variants={itemVariants}>
                   <Card
                     sx={{

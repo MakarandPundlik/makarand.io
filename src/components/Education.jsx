@@ -42,7 +42,7 @@ const Education = () => {
       <Container maxWidth="lg">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
           <Box sx={{ textAlign: 'center', mb: 6 }}>
-            <Typography variant="h2" sx={{ fontWeight: 700, mb: 2, background: 'linear-gradient(135deg, #00D4FF 0%, #FF6B6B 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <Typography variant="h2" sx={{ fontWeight: 700, mb: 2, background: 'linear-gradient(135deg, #00D4FF 0%, #FFFFFF 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Education
             </Typography>
             <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: '600px', margin: '0 auto' }}>
@@ -87,7 +87,7 @@ const Education = () => {
                               <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: 'text.primary' }}>Key Coursework:</Typography>
                               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                                 {edu.coursework.map((course, idx) => (
-                                  <Chip key={idx} label={course} size="small" sx={{ background: 'rgba(255, 107, 107, 0.1)', color: 'secondary.main', border: '1px solid rgba(255, 107, 107, 0.3)' }} />
+                                  <Chip key={idx} label={course} size="small" sx={{ background: 'rgba(0, 212, 255, 0.1)', color: 'primary.main', border: '1px solid rgba(0, 212, 255, 0.3)' }} />
                                 ))}
                               </Box>
                             </Grid>

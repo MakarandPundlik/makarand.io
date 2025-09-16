@@ -6,8 +6,7 @@ import Landing from "./components/Landing";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -18,9 +17,9 @@ const theme = createTheme({
       dark: '#0277BD',
     },
     secondary: {
-      main: '#FF6B6B',
-      light: '#FF8A80',
-      dark: '#D32F2F',
+      main: '#FFFFFF',
+      light: '#F5F5F5',
+      dark: '#E0E0E0',
     },
     background: {
       default: '#0A0A0A',
@@ -32,29 +31,25 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Ubuntu", "Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontWeight: 700,
-      fontSize: '3.5rem',
+      fontSize: '2.5rem',
       lineHeight: 1.2,
     },
     h2: {
-      fontWeight: 600,
-      fontSize: '2.5rem',
+      fontSize: '2rem',
       lineHeight: 1.3,
     },
     h3: {
-      fontWeight: 600,
-      fontSize: '2rem',
-      lineHeight: 1.4,
-    },
-    h4: {
-      fontWeight: 500,
       fontSize: '1.5rem',
       lineHeight: 1.4,
     },
+    h4: {
+      fontSize: '1.25rem',
+      lineHeight: 1.4,
+    },
     body1: {
-      fontSize: '1.1rem',
+      fontSize: '1rem',
       lineHeight: 1.6,
     },
   },
@@ -78,9 +73,8 @@ function App() {
           <Experience />
           <Projects />
           <Skills />
-          <Education />
-          <Contact />
         </motion.div>
+        <Footer />
       </ThemeProvider>
     </div>
   );
