@@ -23,6 +23,26 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'DevOps CI/CD Pipeline',
+      description: 'Built a comprehensive CI/CD pipeline with automated security scanning and testing. Integrated Trivy and Semgrep for vulnerability and static code analysis, implemented unit tests, integration tests using Playwright, and performance testing with k6. Automated the entire workflow using GitHub Actions, Ansible, Jenkins, and Docker for seamless deployment.',
+      image: `${process.env.PUBLIC_URL}/devops.png`,
+      technologies: ['GitHub Actions', 'Docker', 'Jenkins', 'Ansible', 'Trivy', 'Semgrep', 'Playwright', 'k6'],
+      githubUrl: '#',
+      featured: true,
+      category: 'DevOps'
+    },
+    {
+      id: 3,
+      title: 'Cloud Architecture Design',
+      description: 'Designed and architected a complete cloud solution from scratch. Defined business and technical requirements, conducted deep tradeoff analysis, and compared cloud providers against technical requirements. Created comprehensive data and control plane architecture with detailed CloudFormation infrastructure diagrams.',
+      image: `${process.env.PUBLIC_URL}/cloud.png`,
+      technologies: ['AWS', 'CloudFormation', 'Architecture Design', 'Cloud Computing'],
+      githubUrl: '#',
+      featured: true,
+      category: 'Cloud'
+    },
+    {
+      id: 4,
       title: 'The Art Of Success',
       description: 'A webapp for students suffereing with ADHD and Dyslexia. App pairs students with tutors based on their experies and dilects',
       image: `${process.env.PUBLIC_URL}/artofsuccess.jpg`,
@@ -33,7 +53,7 @@ const Projects = () => {
       category: 'Web App'
     },
     {
-      id: 3,
+      id: 5,
       title: 'Pack Travel',
       description: 'Most of the university students do not have a car to travel off-campus and rely mostly on the Wolfline. But what if someone wants to travel outside Wolflines limit? Well... why not collaborate on PackTravel to travel off-campus by a cab, rental car, etc.',
       image: `${process.env.PUBLIC_URL}/wolf2.svg`,
@@ -345,41 +365,6 @@ const Projects = () => {
           </Grid>
         </motion.div>
 
-        {/* View More Button */}
-        <Box sx={{ mt: 8, textAlign: 'center' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              background: 'transparent',
-              border: '2px solid #00D4FF',
-              color: '#00D4FF',
-              padding: '12px 32px',
-              borderRadius: '8px',
-              fontWeight: 600,
-              fontSize: '1rem',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = '#00D4FF';
-              e.target.style.color = '#0A0A0A';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = 'transparent';
-              e.target.style.color = '#00D4FF';
-            }}
-          >
-            View All Projects
-          </motion.button>
-          </motion.div>
-        </Box>
       </Container>
     </Box>
   );

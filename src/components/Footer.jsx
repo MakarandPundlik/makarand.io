@@ -144,7 +144,7 @@ const Footer = () => {
                 fontSize: '0.875rem',
               }}
             >
-              © {new Date().getFullYear()} Made with ❤️ by Makarand and Cursor.
+              © {new Date().getFullYear()} Made with ❤️ by Makarand.
             </Typography>
           </Box>
         </motion.div>

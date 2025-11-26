@@ -22,7 +22,7 @@ const Skills = () => {
     {
       title: 'Backend Development',
       icon: <Storage />,
-      color: '#4FC3F7',
+      color: '#9C27B0',
       skills: [
         { name: 'Node.js', level: 99 },
         { name: 'Python', level: 80 },
@@ -238,65 +238,6 @@ const Skills = () => {
           </Grid>
         </motion.div>
 
-        {/* Additional Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <Box sx={{ mt: 8, textAlign: 'center' }}>
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: 600,
-                mb: 4,
-                color: 'text.primary',
-              }}
-            >
-              Additional Skills
-            </Typography>
-            
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center' }}>
-              {[
-                'Agile/Scrum', 'Project Management', 'Team Leadership', 'Code Review',
-                'Performance Optimization', 'Security Best Practices', 'API Design',
-                'Responsive Design', 'Cross-browser Compatibility', 'SEO Optimization',
-                'Accessibility (WCAG)', 'Internationalization', 'Version Control',
-                'Documentation', 'Mentoring', 'Problem Solving'
-              ].map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <Box
-                    sx={{
-                      px: 3,
-                      py: 1.5,
-                      borderRadius: 3,
-                      background: 'rgba(0, 212, 255, 0.1)',
-                      border: '1px solid rgba(0, 212, 255, 0.3)',
-                      color: 'primary.main',
-                      fontWeight: 500,
-                      fontSize: '0.9rem',
-                      cursor: 'pointer',
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        background: 'rgba(0, 212, 255, 0.2)',
-                        transform: 'translateY(-2px)',
-                      },
-                    }}
-                  >
-                    {skill}
-                  </Box>
-                </motion.div>
-              ))}
-            </Box>
-          </Box>
-        </motion.div>
       </Container>
     </Box>
   );
