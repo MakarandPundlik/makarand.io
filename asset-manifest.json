@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/makarand.io/static/js/main.6424ba83.js",
+    "main.css": "/makarand.io/static/css/main.f20fda8b.css",
+    "main.js": "/makarand.io/static/js/main.dd241586.js",
+    "static/js/488.10c99115.chunk.js": "/makarand.io/static/js/488.10c99115.chunk.js",
     "index.html": "/makarand.io/index.html",
-    "main.6424ba83.js.map": "/makarand.io/static/js/main.6424ba83.js.map"
+    "main.f20fda8b.css.map": "/makarand.io/static/css/main.f20fda8b.css.map",
+    "main.dd241586.js.map": "/makarand.io/static/js/main.dd241586.js.map",
+    "488.10c99115.chunk.js.map": "/makarand.io/static/js/488.10c99115.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6424ba83.js"
+    "static/css/main.f20fda8b.css",
+    "static/js/main.dd241586.js"
   ]
 }
